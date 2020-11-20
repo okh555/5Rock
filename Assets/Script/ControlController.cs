@@ -20,8 +20,8 @@ public class ControlController : MonoBehaviour
     {
         MasterController.Instance.LeftTeleportInteractor.gameObject.SetActive(isEnable);
         MasterController.Instance.RightTeleportInteractor.gameObject.SetActive(isEnable);
-        MasterController.Instance.LeftTractorBeam.gameObject.SetActive(isEnable);
-        MasterController.Instance.RightTractorBeam.gameObject.SetActive(isEnable);
+        MasterController.Instance.LeftTractorBeam.enabled = isEnable;
+        MasterController.Instance.RightTractorBeam.enabled = isEnable;
 
         snapTurn.enabled = isEnable;
     }
