@@ -15,5 +15,6 @@ public class BilliardCushion : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.attachedRigidbody.velocity = Vector3.Reflect(other.attachedRigidbody.velocity, NormalVector) * CushionFriction;
+        other.attachedRigidbody.angularVelocity = Vector3.Reflect(other.attachedRigidbody.angularVelocity, NormalVector) * CushionFriction;
     }
 }
