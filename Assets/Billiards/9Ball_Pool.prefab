@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 76529068918124680}
   - component: {fileID: 5394166129068575299}
   m_Layer: 0
-  m_Name: 9Ball_Pool_Mapping
+  m_Name: 9Ball_Pool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -425,6 +425,7 @@ Transform:
   - {fileID: 5132471416155253889}
   - {fileID: 1432935010331032877}
   - {fileID: 5127016056860092269}
+  - {fileID: 4187849257395684004}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2073,3 +2074,78 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NormalVector: {x: 0, y: 0, z: 1}
   CushionFriction: 0.2
+--- !u!1001 &9179618589193120190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3416100284485596743}
+    m_Modifications:
+    - target: {fileID: -4216859302048453862, guid: eec2c055a90f61a4b97319683a8a8931,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.3185
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: eec2c055a90f61a4b97319683a8a8931,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.416
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: eec2c055a90f61a4b97319683a8a8931,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: eec2c055a90f61a4b97319683a8a8931,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: eec2c055a90f61a4b97319683a8a8931,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: eec2c055a90f61a4b97319683a8a8931,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: eec2c055a90f61a4b97319683a8a8931,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: eec2c055a90f61a4b97319683a8a8931,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: eec2c055a90f61a4b97319683a8a8931,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: eec2c055a90f61a4b97319683a8a8931,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: eec2c055a90f61a4b97319683a8a8931,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: eec2c055a90f61a4b97319683a8a8931,
+        type: 3}
+      propertyPath: m_Name
+      value: 8Ball_Pool_Rack
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eec2c055a90f61a4b97319683a8a8931, type: 3}
+--- !u!4 &4187849257395684004 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: eec2c055a90f61a4b97319683a8a8931,
+    type: 3}
+  m_PrefabInstance: {fileID: 9179618589193120190}
+  m_PrefabAsset: {fileID: 0}
