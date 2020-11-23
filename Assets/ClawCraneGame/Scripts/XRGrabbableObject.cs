@@ -67,8 +67,11 @@ public class XRGrabbableObject : XRGrabInteractable
     }
 
 
-    public void ChangeToGrabbable()
+    public void ChangeToGrabbable(bool setGrabbable)
     {
-        interactionLayerMask = DefaultLayerMask;
+        if (setGrabbable)
+            interactionLayerMask = DefaultLayerMask;
+        else
+            interactionLayerMask = 0;
     }
 }
