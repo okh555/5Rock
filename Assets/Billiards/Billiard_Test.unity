@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!64 &650554496 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 6266182748673944586, guid: fa81f4517d84afc47b92a76e3308f22e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8519896060366590456}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &958828136
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,5 +621,11 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 2133944440}
-    m_RemovedComponents: []
+    - target: {fileID: 8519896061879751977, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: m_Colliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 650554496}
+    m_RemovedComponents:
+    - {fileID: 8519896061879751976, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
