@@ -56,9 +56,6 @@ public class NetworkPlayer : MonoBehaviour
             MapPosition(leftHand, leftHandRig);
             MapPosition(rightHand, rightHandRig);
 
-            // animation
-            UpdateHandAnimation(leftController, leftHandAnimator);
-            UpdateHandAnimation(rightController, rightHandAnimator);
         }
     }
 
@@ -67,19 +64,5 @@ public class NetworkPlayer : MonoBehaviour
         target.position = rigTransform.position;
         target.rotation = rigTransform.rotation;
     }
-
-    private void UpdateHandAnimation(XRController targetDevice, Animator handAnimator)
-    {
-<<<<<<< Updated upstream
-        //if (targetDevice.selectInteractionState.activatedThisFrame)
-        //    handAnimator.SetTrigger(targetDevice.modelSelectTransition);
-        //else if (targetDevice.selectInteractionState.deActivatedThisFrame)
-        //    handAnimator.SetTrigger(targetDevice.modelDeSelectTransition);  
-=======
->>>>>>> Stashed changes
-       /* if (targetDevice.selectInteractionState.activatedThisFrame)
-            handAnimator.SetTrigger(targetDevice.modelSelectTransition);
-        else if (targetDevice.selectInteractionState.deActivatedThisFrame)
-            handAnimator.SetTrigger(targetDevice.modelDeSelectTransition);  */
-    }
+    
 }

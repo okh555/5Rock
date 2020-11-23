@@ -9,12 +9,6 @@ PhysicMaterial:
   m_Name: Ball
   dynamicFriction: 0.6
   staticFriction: 0.6
-<<<<<<< Updated upstream
-  bounciness: 0.4
+  bounciness: 0
   frictionCombine: 0
-  bounceCombine: 3
-=======
-  bounciness: 0.9
-  frictionCombine: 0
-  bounceCombine: 2
->>>>>>> Stashed changes
+  bounceCombine: 0
