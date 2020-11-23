@@ -390,7 +390,11 @@ Mesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Name: pb_Mesh37852
+=======
+  m_Name: pb_Mesh-9622
+>>>>>>> Stashed changes
 =======
   m_Name: pb_Mesh-9622
 >>>>>>> Stashed changes
@@ -557,7 +561,11 @@ Mesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Name: pb_Mesh37864
+=======
+  m_Name: pb_Mesh-9624
+>>>>>>> Stashed changes
 =======
   m_Name: pb_Mesh-9624
 >>>>>>> Stashed changes
@@ -718,6 +726,7 @@ Mesh:
     size: 0
     path: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &711244188
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,6 +822,8 @@ MeshRenderer:
   m_SortingOrder: 0
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 --- !u!114 &778173551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,8 +838,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scorePoint1: {fileID: 4962275822006323589}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   scorePoint2: {fileID: 1120476144}
   timeText: {fileID: 711244190}
+=======
+  scorePoint2: {fileID: 4962275822006323589}
+>>>>>>> Stashed changes
 =======
   scorePoint2: {fileID: 4962275822006323589}
 >>>>>>> Stashed changes
@@ -839,7 +854,11 @@ Mesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Name: pb_Mesh37810
+=======
+  m_Name: pb_Mesh-9620
+>>>>>>> Stashed changes
 =======
   m_Name: pb_Mesh-9620
 >>>>>>> Stashed changes
@@ -1000,6 +1019,7 @@ Mesh:
     size: 0
     path: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &1120476144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,6 +1081,8 @@ MonoBehaviour:
   preBall: {fileID: 0}
   colliderTime: 0
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &1191044642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1140,6 +1162,9 @@ PrefabInstance:
       objectReference: {fileID: 1690344707}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da80694cd5fb404ba62239c876cdb98, type: 3}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &1284611493
 GameObject:
@@ -1452,7 +1477,11 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &1330837764
+=======
+--- !u!1 &1290522851
+>>>>>>> Stashed changes
 =======
 --- !u!1 &1290522851
 >>>>>>> Stashed changes
@@ -1463,6 +1492,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   - component: {fileID: 1330837765}
   - component: {fileID: 1330837770}
@@ -1480,13 +1510,25 @@ GameObject:
   m_Name: XR Interaction Manager
   m_TagString: Untagged
 >>>>>>> Stashed changes
+=======
+  - component: {fileID: 1290522853}
+  - component: {fileID: 1290522852}
+  m_Layer: 0
+  m_Name: XR Interaction Manager
+  m_TagString: Untagged
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!4 &1330837765
 Transform:
+=======
+--- !u!114 &1290522852
+MonoBehaviour:
+>>>>>>> Stashed changes
 =======
 --- !u!114 &1290522852
 MonoBehaviour:
@@ -1495,6 +1537,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   m_GameObject: {fileID: 1330837764}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -1507,6 +1550,8 @@ MonoBehaviour:
 --- !u!114 &1330837766
 MonoBehaviour:
 =======
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 1290522851}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1547,11 +1592,15 @@ GameObject:
   m_IsActive: 1
 --- !u!65 &1353126790
 BoxCollider:
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   m_GameObject: {fileID: 1330837764}
   m_Enabled: 1
@@ -1726,16 +1775,26 @@ Transform:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
+=======
+  m_GameObject: {fileID: 1353126789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+>>>>>>> Stashed changes
   serializedVersion: 2
   m_Size: {x: 0.3523083, y: 0.044121757, z: 0.26726964}
   m_Center: {x: -0.007442952, y: 0.013396747, z: -0.033634428}
 --- !u!224 &1353126791
 RectTransform:
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   m_GameObject: {fileID: 1637391272}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -1747,6 +1806,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1637391274
 =======
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 1353126789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 3.5458944}
@@ -1761,12 +1822,16 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1353126792
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   m_GameObject: {fileID: 1637391272}
   m_Enabled: 1
@@ -1839,10 +1904,34 @@ MonoBehaviour:
   SelectRecognitionTime: 0.1
 --- !u!54 &1637391275
 Rigidbody:
+=======
+  m_GameObject: {fileID: 1353126789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3488fdcc8a5bd43b57e1424cc0857b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 0}
+--- !u!1 &1690344707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1837324663596057045, guid: 5da80694cd5fb404ba62239c876cdb98,
+    type: 3}
+  m_PrefabInstance: {fileID: 1191044642}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1800574981 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
+    type: 3}
+  m_PrefabInstance: {fileID: 1191044642}
+  m_PrefabAsset: {fileID: 0}
+--- !u!43 &1831266763
+Mesh:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1637391272}
   serializedVersion: 2
   m_Mass: 0.6
@@ -1936,10 +2025,172 @@ Transform:
 >>>>>>> Stashed changes
 --- !u!43 &1831266763
 Mesh:
+=======
+  m_Name: pb_Mesh24174
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 36
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 24
+    localAABB:
+      m_Center: {x: 10, y: 0.5, z: -10}
+      m_Extent: {x: 10, y: 0.5, z: 10}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 24
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 1152
+    _typelessdata: 00000000000000000000000000000000000000000000803f000080bf0000000000000000000080bf00000000000000000000a041000000000000000000000000000000000000803f000080bf0000000000000000000080bf0000a0c100000000000000000000803f0000000000000000000000000000803f000080bf0000000000000000000080bf000000000000803f0000a0410000803f0000000000000000000000000000803f000080bf0000000000000000000080bf0000a0c10000803f0000a04100000000000000000000803f000000000000000000000000000000000000803f000080bf00000000000000000000a041000000000000a0c10000803f000000000000000000000000000000000000803f000080bf0000a0c1000000000000a0410000803f000000000000803f000000000000000000000000000000000000803f000080bf000000000000803f0000a0410000803f0000a0c10000803f000000000000000000000000000000000000803f000080bf0000a0c10000803f0000a041000000000000a0c10000000000000000000080bf0000803f0000000000000000000080bf0000a0410000000000000000000000000000a0c10000000000000000000080bf0000803f0000000000000000000080bf00000000000000000000a0410000803f0000a0c10000000000000000000080bf0000803f0000000000000000000080bf0000a0410000803f000000000000803f0000a0c10000000000000000000080bf0000803f0000000000000000000080bf000000000000803f00000000000000000000a0c1000080bf00000000000000000000000000000000000080bf000080bf0000a04100000000000000000000000000000000000080bf00000000000000000000000000000000000080bf000080bf0000000000000000000000000000803f0000a0c1000080bf00000000000000000000000000000000000080bf000080bf0000a0410000803f000000000000803f00000000000080bf00000000000000000000000000000000000080bf000080bf000000000000803f000000000000803f00000000000000000000803f000000000000803f0000000000000000000080bf00000000000000000000a0410000803f00000000000000000000803f000000000000803f0000000000000000000080bf0000a04100000000000000000000803f0000a0c1000000000000803f000000000000803f0000000000000000000080bf000000000000a0c10000a0410000803f0000a0c1000000000000803f000000000000803f0000000000000000000080bf0000a0410000a0c100000000000000000000a0c100000000000080bf00000000000080bf0000000000000000000080bf000000000000a0c10000a041000000000000a0c100000000000080bf00000000000080bf0000000000000000000080bf0000a0c10000a0c100000000000000000000000000000000000080bf00000000000080bf0000000000000000000080bf00000000000000000000a041000000000000000000000000000080bf00000000000080bf0000000000000000000080bf0000a0c100000000
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 10, y: 0.5, z: -10}
+    m_Extent: {x: 10, y: 0.5, z: 10}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
+--- !u!33 &1187782053615776415
+MeshFilter:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   m_Name: pb_Mesh37776
 =======
@@ -2156,6 +2407,8 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   m_GameObject: {fileID: 1441949362550907642}
@@ -5450,8 +5703,13 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Size: {x: 0.32201537, y: 0.04560641, z: 0.30391803}
   m_Center: {x: -0.00410435, y: 0.11000001, z: -0.011020639}
+=======
+  m_Size: {x: 0.32201537, y: 0.04560641, z: 0.21297982}
+  m_Center: {x: -0.0041043465, y: 0.11, z: -0.05648971}
+>>>>>>> Stashed changes
 =======
   m_Size: {x: 0.32201537, y: 0.04560641, z: 0.21297982}
   m_Center: {x: -0.0041043465, y: 0.11, z: -0.05648971}
@@ -5469,7 +5727,11 @@ GameObject:
   - component: {fileID: 4962275822006323591}
   m_Layer: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Name: ScorePoint
+=======
+  m_Name: ScorePoint1
+>>>>>>> Stashed changes
 =======
   m_Name: ScorePoint1
 >>>>>>> Stashed changes
@@ -5506,8 +5768,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   preBall: {fileID: 0}
   colliderTime: 0
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!1 &4962275822224176329
@@ -5524,7 +5789,10 @@ GameObject:
   - component: {fileID: 4962275822224176330}
   - component: {fileID: 4962275822224176342}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - component: {fileID: 4962275822224176332}
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   m_Layer: 0
@@ -5542,7 +5810,11 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4962275822224176329}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Material: {fileID: 13400000, guid: 314db001376db944aaa7d646640ce18d, type: 2}
+=======
+  m_Material: {fileID: 13400000, guid: 1cb7f3498fbf40643b10c31b35b14a08, type: 2}
+>>>>>>> Stashed changes
 =======
   m_Material: {fileID: 13400000, guid: 1cb7f3498fbf40643b10c31b35b14a08, type: 2}
 >>>>>>> Stashed changes
@@ -5590,6 +5862,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!114 &4962275822224176332
 MonoBehaviour:
@@ -5668,6 +5941,8 @@ MonoBehaviour:
   SelectRecognitionTime: 0.1
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 --- !u!33 &4962275822224176340
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5699,7 +5974,11 @@ Rigidbody:
   m_GameObject: {fileID: 4962275822224176329}
   serializedVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Mass: 0.6
+=======
+  m_Mass: 1
+>>>>>>> Stashed changes
 =======
   m_Mass: 1
 >>>>>>> Stashed changes
@@ -25127,17 +25406,23 @@ Transform:
   m_GameObject: {fileID: 4904032835298019175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 1.323, z: -1.448}
   m_LocalScale: {x: 0.2, y: 0.18, z: 0.2}
   m_Children:
   - {fileID: 4962275822006323590}
   - {fileID: 1120476146}
 =======
+=======
+>>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 1.342, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 4962275822006323590}
   - {fileID: 1353126791}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   - {fileID: 1890133021418251852}
   - {fileID: 4962275821745321921}
@@ -25146,9 +25431,12 @@ Transform:
   - {fileID: 4962275822839723846}
   - {fileID: 8269548664435661958}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 711244189}
   - {fileID: 1637391273}
   - {fileID: 1330837765}
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   m_Father: {fileID: 0}
