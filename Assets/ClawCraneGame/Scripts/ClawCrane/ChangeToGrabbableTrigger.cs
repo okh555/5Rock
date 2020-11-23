@@ -11,7 +11,7 @@ public class ChangeToGrabbableTrigger : MonoBehaviour
         XRGrabbableObject grabbableObject = other.gameObject.GetComponent<XRGrabbableObject>();
         if (grabbableObject)
         {
-            grabbableObject.ChangeToGrabbable();
+            grabbableObject.ChangeToGrabbable(true);
         }
     }
 }
