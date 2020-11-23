@@ -70,16 +70,13 @@ public class NetworkPlayer : MonoBehaviour
 
     private void UpdateHandAnimation(XRController targetDevice, Animator handAnimator)
     {
-<<<<<<< Updated upstream
         //if (targetDevice.selectInteractionState.activatedThisFrame)
         //    handAnimator.SetTrigger(targetDevice.modelSelectTransition);
         //else if (targetDevice.selectInteractionState.deActivatedThisFrame)
         //    handAnimator.SetTrigger(targetDevice.modelDeSelectTransition);  
-=======
        /* if (targetDevice.selectInteractionState.activatedThisFrame)
             handAnimator.SetTrigger(targetDevice.modelSelectTransition);
         else if (targetDevice.selectInteractionState.deActivatedThisFrame)
             handAnimator.SetTrigger(targetDevice.modelDeSelectTransition);  */
->>>>>>> Stashed changes
     }
 }
