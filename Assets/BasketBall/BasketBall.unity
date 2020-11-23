@@ -389,7 +389,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_Name: pb_Mesh37852
+=======
+  m_Name: pb_Mesh-9622
+>>>>>>> Stashed changes
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -552,7 +556,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_Name: pb_Mesh37864
+=======
+  m_Name: pb_Mesh-9624
+>>>>>>> Stashed changes
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -709,6 +717,7 @@ Mesh:
     offset: 0
     size: 0
     path: 
+<<<<<<< Updated upstream
 --- !u!1 &711244188
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,6 +811,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &778173551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,15 +826,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scorePoint1: {fileID: 4962275822006323589}
+<<<<<<< Updated upstream
   scorePoint2: {fileID: 1120476144}
   timeText: {fileID: 711244190}
+=======
+  scorePoint2: {fileID: 4962275822006323589}
+>>>>>>> Stashed changes
 --- !u!43 &980273297
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_Name: pb_Mesh37810
+=======
+  m_Name: pb_Mesh-9620
+>>>>>>> Stashed changes
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -980,6 +999,7 @@ Mesh:
     offset: 0
     size: 0
     path: 
+<<<<<<< Updated upstream
 --- !u!1 &1120476144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,6 +1060,87 @@ MonoBehaviour:
   ball: {fileID: 0}
   preBall: {fileID: 0}
   colliderTime: 0
+=======
+--- !u!1001 &1191044642
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1837324664885972817, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: StartingPosition
+      value: 
+      objectReference: {fileID: 1800574981}
+    - target: {fileID: 1837324664885972820, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_Name
+      value: XR Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324664885972823, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_CameraFloorOffsetObject
+      value: 
+      objectReference: {fileID: 1690344707}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5da80694cd5fb404ba62239c876cdb98, type: 3}
+>>>>>>> Stashed changes
 --- !u!1 &1284611493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,7 +1451,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1330837764
+=======
+--- !u!1 &1290522851
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1358,6 +1463,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 1330837765}
   - component: {fileID: 1330837770}
   - component: {fileID: 1330837769}
@@ -1367,16 +1473,29 @@ GameObject:
   m_Layer: 0
   m_Name: BasketBall (2)
   m_TagString: BasketBall
+=======
+  - component: {fileID: 1290522853}
+  - component: {fileID: 1290522852}
+  m_Layer: 0
+  m_Name: XR Interaction Manager
+  m_TagString: Untagged
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!4 &1330837765
 Transform:
+=======
+--- !u!114 &1290522852
+MonoBehaviour:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1330837764}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.029999413, y: 3.47, z: 1.69}
@@ -1387,10 +1506,53 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1330837766
 MonoBehaviour:
+=======
+  m_GameObject: {fileID: 1290522851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1290522853
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290522851}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1353126789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1353126791}
+  - component: {fileID: 1353126790}
+  - component: {fileID: 1353126792}
+  m_Layer: 0
+  m_Name: ScorePoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1353126790
+BoxCollider:
+>>>>>>> Stashed changes
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1330837764}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1559,10 +1721,22 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &1637391273
 Transform:
+=======
+  m_GameObject: {fileID: 1353126789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3523083, y: 0.044121757, z: 0.26726964}
+  m_Center: {x: -0.007442952, y: 0.013396747, z: -0.033634428}
+--- !u!224 &1353126791
+RectTransform:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1637391272}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.029999413, y: 3.47, z: -2.290217}
@@ -1572,11 +1746,28 @@ Transform:
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1637391274
+=======
+  m_GameObject: {fileID: 1353126789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3.5458944}
+  m_LocalScale: {x: 3.333333, y: 3.333333, z: 3.333333}
+  m_Children: []
+  m_Father: {fileID: 8238709043160200564}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.036665596, y: 5.967}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1353126792
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1637391272}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1722,13 +1913,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637391272}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+=======
+  m_GameObject: {fileID: 1353126789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3488fdcc8a5bd43b57e1424cc0857b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 0}
+--- !u!1 &1690344707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1837324663596057045, guid: 5da80694cd5fb404ba62239c876cdb98,
+    type: 3}
+  m_PrefabInstance: {fileID: 1191044642}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1800574981 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
+    type: 3}
+  m_PrefabInstance: {fileID: 1191044642}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!43 &1831266763
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_Name: pb_Mesh37776
+=======
+  m_Name: pb_Mesh24174
+>>>>>>> Stashed changes
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1885,12 +2101,18 @@ Mesh:
     offset: 0
     size: 0
     path: 
+<<<<<<< Updated upstream
 --- !u!1 &2081565494
 GameObject:
+=======
+--- !u!33 &1187782053615776415
+MeshFilter:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2081565496}
@@ -1934,6 +2156,8 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 1441949362550907642}
   m_Mesh: {fileID: -2432090755550338912, guid: 820748ad43107cf438b8e644fd9a1377, type: 3}
 --- !u!1 &1441949362550907642
@@ -5225,8 +5449,13 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
+<<<<<<< Updated upstream
   m_Size: {x: 0.32201537, y: 0.04560641, z: 0.30391803}
   m_Center: {x: -0.00410435, y: 0.11000001, z: -0.011020639}
+=======
+  m_Size: {x: 0.32201537, y: 0.04560641, z: 0.21297982}
+  m_Center: {x: -0.0041043465, y: 0.11, z: -0.05648971}
+>>>>>>> Stashed changes
 --- !u!1 &4962275822006323589
 GameObject:
   m_ObjectHideFlags: 0
@@ -5239,7 +5468,11 @@ GameObject:
   - component: {fileID: 4962275822006323584}
   - component: {fileID: 4962275822006323591}
   m_Layer: 0
+<<<<<<< Updated upstream
   m_Name: ScorePoint
+=======
+  m_Name: ScorePoint1
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5272,8 +5505,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 0}
+<<<<<<< Updated upstream
   preBall: {fileID: 0}
   colliderTime: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &4962275822224176329
 GameObject:
   m_ObjectHideFlags: 0
@@ -5287,7 +5523,10 @@ GameObject:
   - component: {fileID: 4962275822224176331}
   - component: {fileID: 4962275822224176330}
   - component: {fileID: 4962275822224176342}
+<<<<<<< Updated upstream
   - component: {fileID: 4962275822224176332}
+=======
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: BasketBall
   m_TagString: BasketBall
@@ -5302,7 +5541,11 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4962275822224176329}
+<<<<<<< Updated upstream
   m_Material: {fileID: 13400000, guid: 314db001376db944aaa7d646640ce18d, type: 2}
+=======
+  m_Material: {fileID: 13400000, guid: 1cb7f3498fbf40643b10c31b35b14a08, type: 2}
+>>>>>>> Stashed changes
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -5347,6 +5590,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< Updated upstream
 --- !u!114 &4962275822224176332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5422,6 +5666,8 @@ MonoBehaviour:
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
   SelectRecognitionTime: 0.1
+=======
+>>>>>>> Stashed changes
 --- !u!33 &4962275822224176340
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5452,7 +5698,11 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4962275822224176329}
   serializedVersion: 2
+<<<<<<< Updated upstream
   m_Mass: 0.6
+=======
+  m_Mass: 1
+>>>>>>> Stashed changes
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -24876,20 +25126,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4904032835298019175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 1.323, z: -1.448}
   m_LocalScale: {x: 0.2, y: 0.18, z: 0.2}
   m_Children:
   - {fileID: 4962275822006323590}
   - {fileID: 1120476146}
+=======
+  m_LocalPosition: {x: 0, y: 1.342, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_Children:
+  - {fileID: 4962275822006323590}
+  - {fileID: 1353126791}
+>>>>>>> Stashed changes
   - {fileID: 1890133021418251852}
   - {fileID: 4962275821745321921}
   - {fileID: 4962275822617233148}
   - {fileID: 4962275822224176341}
   - {fileID: 4962275822839723846}
   - {fileID: 8269548664435661958}
+<<<<<<< Updated upstream
   - {fileID: 711244189}
   - {fileID: 1637391273}
   - {fileID: 1330837765}
+=======
+>>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
