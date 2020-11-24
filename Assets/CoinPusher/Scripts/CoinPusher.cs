@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CoinPusher : MonoBehaviour
 {
@@ -20,8 +21,8 @@ public class CoinPusher : MonoBehaviour
     int EarnCoinCount = 0;
     bool isCoinExhaust = false;
     public float coinExhaustDelay = 0.2f;
-
-    public TextMesh ExhaustCoinCountText;
+    
+    public TMP_Text ExhaustCoinCountText;
 
     private void Awake()
     {

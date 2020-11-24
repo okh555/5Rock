@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CoinShooter : MonoBehaviour
 {
@@ -13,8 +14,8 @@ public class CoinShooter : MonoBehaviour
 
     int coinCount = 0;
     public int coinAddChargeSize = 5;
-
-    public TextMesh CoinCountText;
+    
+    public TMP_Text CoinCountText;
 
     const float MaxRotateAngle = 15f;
 

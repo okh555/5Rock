@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1384,9 +1384,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 441503516586236854, guid: 3e2f98c3892e6a94eadccd29dcd38b77,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783994927524307060, guid: 3e2f98c3892e6a94eadccd29dcd38b77,
+        type: 3}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75,
+        type: 3}
     - target: {fileID: 3453104431702850429, guid: 3e2f98c3892e6a94eadccd29dcd38b77,
         type: 3}
       propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557586934009842500, guid: 3e2f98c3892e6a94eadccd29dcd38b77,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557586934009842500, guid: 3e2f98c3892e6a94eadccd29dcd38b77,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557586934009842500, guid: 3e2f98c3892e6a94eadccd29dcd38b77,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557586934009842500, guid: 3e2f98c3892e6a94eadccd29dcd38b77,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557586934009842500, guid: 3e2f98c3892e6a94eadccd29dcd38b77,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4694962172873807570, guid: 3e2f98c3892e6a94eadccd29dcd38b77,
@@ -1404,6 +1440,11 @@ PrefabInstance:
       propertyPath: coinAddChargeSize
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6791058622662716877, guid: 3e2f98c3892e6a94eadccd29dcd38b77,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7733961055223138131, guid: 3e2f98c3892e6a94eadccd29dcd38b77,
         type: 3}
       propertyPath: RemovePosition.z
@@ -1414,6 +1455,11 @@ PrefabInstance:
       propertyPath: RemovePosition.y
       value: -0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 8276072570908302779, guid: 3e2f98c3892e6a94eadccd29dcd38b77,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
     - target: {fileID: 8609900487478404289, guid: 3e2f98c3892e6a94eadccd29dcd38b77,
         type: 3}
       propertyPath: m_LocalPosition.x
