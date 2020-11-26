@@ -10,6 +10,7 @@ public class RemoveCapsule : MonoBehaviour
     void Awake()
     {
         meshRenderer = GetComponent<MeshRenderer>();
+        sphereCollider = GetComponent<SphereCollider>();
     }
 
     public void RemoveCraneCapsule()
