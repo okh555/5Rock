@@ -9,6 +9,11 @@ public class SpawnBilliardBall : MonoBehaviour
 
     private GameObject spawnedBalls;
 
+    void Start()
+    {
+        SpawnBall();
+    }
+
     public void SpawnBall()
     {
         if (spawnedBalls != null)

@@ -505,7 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e490f391fba732441be8942f958830db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balls: {fileID: 0}
+  balls: {fileID: 6913772958737979926, guid: b7c63f7503a2b464eaad4cd709b0cfe4, type: 3}
   spawnPosition: {fileID: 3506727224923747641}
 --- !u!1 &2072072171109015322
 GameObject:
@@ -936,7 +936,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3079044410286852829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.68, y: 0.22, z: 0}
+  m_LocalPosition: {x: -0.885, y: 0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3416100284485596743}
