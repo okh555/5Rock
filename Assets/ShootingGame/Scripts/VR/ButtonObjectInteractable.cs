@@ -1,8 +1,9 @@
 ﻿using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using Photon.Pun;
 
-public class ButtonObjectInteractable : MonoBehaviour
+public class ButtonObjectInteractable : MonoBehaviour, IPunObservable
 {
     [System.Serializable]
     public class ButtonPressedEvent : UnityEvent { }
@@ -79,10 +80,22 @@ public class ButtonObjectInteractable : MonoBehaviour
         }
     }
 
-#if UNITY_EDITOR
-    void OnDrawGizmosSelected()
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        Handles.DrawLine(transform.position, transform.position + transform.TransformDirection(Axis).normalized * MaxDistance);
+        if (stream.IsWriting)
+        {
+            stream.SendNext(m_Pressed);
+        }
+        else
+        {
+            m_Pressed = (bool)stream.ReceiveNext();
+        }
     }
-#endif
+
+//#if UNITY_EDITOR
+//    void OnDrawGizmosSelected()
+//    {
+//        Handles.DrawLine(transform.position, transform.position + transform.TransformDirection(Axis).normalized * MaxDistance);
+//    }
+//#endif
 }
