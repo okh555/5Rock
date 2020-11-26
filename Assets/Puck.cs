@@ -8,7 +8,7 @@ public class Puck : MonoBehaviour
     Rigidbody rig;
 
     float slipperyTime = 2f;
-    float decreaseTime = 0.05f;
+    float decreaseTime = 0.01f;
 
     float collisionTime = 0;
     float decreaseTempTime = 0;
@@ -33,7 +33,7 @@ public class Puck : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, currentPos.y, transform.position.z);
         }
-        if (Time.time - collisionTime > slipperyTime)
+        /*if (Time.time - collisionTime > slipperyTime)
         {
             if (Time.time - decreaseTempTime > decreaseTime)
             {
@@ -41,7 +41,7 @@ public class Puck : MonoBehaviour
                 decreaseTime = Time.time;
             }
 
-        }
+        }*/
     }
 
 

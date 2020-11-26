@@ -17,21 +17,26 @@ public class HockeyManager : MonoBehaviour
     int player1_score = 0;
     int player2_score = 0;
 
+    GameObject player1;
+    GameObject player2;
+
 
     // Start is called before the first frame update
     void Awake()
     {
         Reset();
+        ScoreBoard = GetComponentInChildren<TMP_Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        ScoreBoard.SetText(player1_score + " : " + player2_score);
     }
 
     public void Score(bool player)
     {
+        Reset();
         if(player)
         {
             player1_score++;
@@ -44,9 +49,27 @@ public class HockeyManager : MonoBehaviour
 
     void Reset()
     {
-        Instantiate(Puck, puckPos.position, Puck.transform.rotation);
-        Instantiate(HockeyStriker, player2Pos.position, HockeyStriker.transform.rotation);
-        Instantiate(HockeyStriker, player1Pos.position, HockeyStriker.transform.rotation);
+        GameObject puck = Instantiate(Puck, puckPos.position, Puck.transform.rotation);
+        puck.transform.parent = gameObject.transform;
+        if (player2 == null)
+        {
+            player2 = Instantiate(HockeyStriker, player2Pos.position, HockeyStriker.transform.rotation);
+            player2.transform.parent = gameObject.transform;
+        }
+        if (player1 == null)
+        {
+            player1 = Instantiate(HockeyStriker, player1Pos.position, HockeyStriker.transform.rotation);
+            player1.transform.parent = gameObject.transform;
+        }
+        if (Random.Range(0,1)  == 0)
+        {
+            puck.GetComponent<Rigidbody>().AddForce(new Vector3(20f, 0, 0));
+        }
+        else
+        {
+            puck.GetComponent<Rigidbody>().AddForce(new Vector3(-20f, 0, 0));
+        }
+
     }
 
 }
