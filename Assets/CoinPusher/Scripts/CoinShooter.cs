@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Photon.Pun;
 
-public class CoinShooter : MonoBehaviour
+public class CoinShooter : MonoBehaviour, IPunObservable
 {
     public GameObject CoinPrefab;
     public Transform FirePoint;
@@ -54,6 +55,18 @@ public class CoinShooter : MonoBehaviour
         {
             int newCoinCount = (coinCount > 99) ? 99 : coinCount;
             CoinCountText.text = string.Format("{0:00}", newCoinCount);
+        }
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if(stream.IsWriting)
+        {
+            stream.SendNext(CoinCountText.text);
+        }
+        else
+        {
+            CoinCountText.text = (string)stream.ReceiveNext();
         }
     }
 }
