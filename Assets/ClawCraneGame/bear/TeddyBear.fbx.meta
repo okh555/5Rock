@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eec2c055a90f61a4b97319683a8a8931
+guid: 1f42d6305851e9e4caaafa2934eba8c7
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
@@ -7,13 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 8BallPoolRack
-    second: {fileID: 2100000, guid: 0b49bb114920c1b49baada24653433bd, type: 2}
+      name: Material.001
+    second: {fileID: 2100000, guid: 4315a41cc9396ef4d8a781f2fdbacdb8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 8BallPoolRack_Bottom
-    second: {fileID: 2100000, guid: f548259dc38718b4bbf44f322b838bbd, type: 2}
+      name: Material.004
+    second: {fileID: 2100000, guid: 7b06aa5804e2e4447aaf4402b6d4970f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nose
+    second: {fileID: 2100000, guid: c04b6beab55c881448e254e7d1a1ff1b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
