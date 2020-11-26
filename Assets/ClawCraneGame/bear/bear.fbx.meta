@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eec2c055a90f61a4b97319683a8a8931
+guid: ec959c890b3ba604089acc122d9f235d
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
@@ -7,13 +7,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 8BallPoolRack
-    second: {fileID: 2100000, guid: 0b49bb114920c1b49baada24653433bd, type: 2}
+      name: No Name
+    second: {fileID: 2100000, guid: 3562e187e7b6cce478fe02097f5f24d3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 8BallPoolRack_Bottom
-    second: {fileID: 2100000, guid: f548259dc38718b4bbf44f322b838bbd, type: 2}
+      name: bear
+    second: {fileID: 2100000, guid: e91cfcaebc4f5aa45a8a3337d5e144e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyes
+    second: {fileID: 2100000, guid: 55453a8e97ee2b64aa39a65810946ff6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mouse
+    second: {fileID: 2100000, guid: 46bf112cf3c563c4a8c566da6fbcfd3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pink
+    second: {fileID: 2100000, guid: e0a2f8ac916964741a4eea5426558cfd, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -46,7 +61,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
