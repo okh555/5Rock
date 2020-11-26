@@ -6,11 +6,16 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class XRTwoHandedGrabbable : XRGrabbableObject
 {
     private XRSecondGrab secondGrab;
+    public Collider FirstGrabCollider;
 
     private XRBaseInteractor secondHand;
+    private Vector3 vec;
+
 
     protected override void Awake()
     {
+        base.Awake();
+
         secondGrab = GetComponentInChildren<XRSecondGrab>();
         if (secondGrab == null)
         {
@@ -29,7 +34,8 @@ public class XRTwoHandedGrabbable : XRGrabbableObject
     {
         secondGrab.SetGrabActive(isActive);
         
-        ChangeToGrabbable(!isActive);
+
+        FirstGrabCollider.enabled=!isActive;
     }
 
     protected override void OnSelectEnter(XRBaseInteractor interactor)
@@ -53,7 +59,10 @@ public class XRTwoHandedGrabbable : XRGrabbableObject
         {
             if (secondGrab != null && secondHand != null)
             {
-                transform.LookAt(secondHand.transform);
+                transform.LookAt(secondHand.transform, Vector3.right);
+
+                transform.position = selectingInteractor.transform.position;
+                
             }
         }
     }
@@ -69,4 +78,5 @@ public class XRTwoHandedGrabbable : XRGrabbableObject
         if (secondHand == interactor)
             secondHand = null;
     }
+
 }
