@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
+using Photon.Pun;
 
-public class CoinInsert : XRBaseInteractor
+public class CoinInsert : XRBaseInteractor, IPunObservable
 {
     [System.Serializable]
     public class CoinInsertEvent : UnityEvent<CoinInsert> { }
@@ -20,6 +21,7 @@ public class CoinInsert : XRBaseInteractor
 
     XRBaseInteractable triggerdInteractable;
 
+    public PhotonView pv;
 
     protected override void OnSelectEnter(XRBaseInteractable interactable)
     {
@@ -27,10 +29,12 @@ public class CoinInsert : XRBaseInteractor
 
         if (Coin == null)
         {
-            AddCoin(interactable.gameObject);
+            //AddCoin(interactable.gameObject);
+            pv.RPC("AddCoin", RpcTarget.AllBuffered, interactable.gameObject);
         }
     }
 
+    [PunRPC]
     void AddCoin(GameObject coin)
     {
         Coin = coin;
@@ -39,12 +43,14 @@ public class CoinInsert : XRBaseInteractor
 
         if (OnCoinInsert.GetPersistentEventCount() > 0)
         {
-            UseCoin();
+            //UseCoin();
+            pv.RPC("UseCoin", RpcTarget.AllBuffered);
         }
 
         StartCoroutine(CoinInsertDelayed());
     }
 
+    [PunRPC]
     public bool UseCoin()
     {
         if (CoinCount > 0)
@@ -62,7 +68,7 @@ public class CoinInsert : XRBaseInteractor
         yield return new WaitForSeconds(CoinInsertDelay);
         if (Coin != null)
         {
-            Destroy(Coin);
+            PhotonNetwork.Destroy(Coin);
         }
     }
 
@@ -98,5 +104,13 @@ public class CoinInsert : XRBaseInteractor
 
         if (triggerdInteractable != null && selectTarget != triggerdInteractable)
             validTargets.Add(triggerdInteractable);
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+            stream.SendNext(CoinCount);
+        else
+            CoinCount = (int)stream.ReceiveNext();
     }
 }

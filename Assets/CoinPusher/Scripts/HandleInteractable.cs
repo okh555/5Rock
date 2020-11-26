@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
+using Photon.Pun;
 
-public class HandleInteractable : XRBaseInteractable
+public class HandleInteractable : XRBaseInteractable, IPunObservable
 {
     [System.Serializable]
     public class HandleActiveEvent : UnityEvent<HandleInteractable> { }
@@ -26,6 +27,7 @@ public class HandleInteractable : XRBaseInteractable
     float totalChangedAngle;
     public float handleActiveEventOccurValue = 360f;
 
+    private bool isUsed = false;
 
     Vector3 GetRotationAxis()
     {
@@ -57,19 +59,24 @@ public class HandleInteractable : XRBaseInteractable
 
     protected override void OnSelectEnter(XRBaseInteractor interactor)
     {
-        grabbingInteractor = interactor;
-        interactorFIrstPosition = interactor.transform.position;
+        if (!isUsed)
+        {
+            grabbingInteractor = interactor;
+            interactorFIrstPosition = interactor.transform.position;
 
-        totalChangedAngle = 0f;
+            totalChangedAngle = 0f;
 
-        base.OnSelectEnter(interactor);
+            base.OnSelectEnter(interactor);
+
+            isUsed = true;
+        }
     }
 
     protected override void OnSelectExit(XRBaseInteractor interactor)
     {
+
         base.OnSelectExit(interactor);
-
-
+        isUsed = false;
     }
 
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
@@ -101,6 +108,18 @@ public class HandleInteractable : XRBaseInteractable
 
                 lastPosition = interactorDirection;
             }
+        }
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if(stream.IsWriting)
+        {
+            stream.SendNext(isUsed);
+        }
+        else
+        {
+            isUsed = (bool)stream.ReceiveNext();
         }
     }
 }

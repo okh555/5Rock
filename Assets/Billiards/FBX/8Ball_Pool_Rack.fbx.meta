@@ -3,7 +3,17 @@ guid: eec2c055a90f61a4b97319683a8a8931
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 8BallPoolRack
+    second: {fileID: 2100000, guid: 0b49bb114920c1b49baada24653433bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 8BallPoolRack_Bottom
+    second: {fileID: 2100000, guid: f548259dc38718b4bbf44f322b838bbd, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

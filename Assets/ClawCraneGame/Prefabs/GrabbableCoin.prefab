@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8578815209407951657}
   - component: {fileID: 3082635228254985888}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: GrabbableCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 5609460840011016339}
   - component: {fileID: 831328997674020091}
   - component: {fileID: 1653760245515350739}
-  - component: {fileID: 5771433702689669802}
+  - component: {fileID: 3878467490223623594}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -224,8 +224,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5771433702689669802
-MeshCollider:
+--- !u!65 &3878467490223623594
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -234,10 +234,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 2.0000002, z: 1.0000002}
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &8119807646400682857
 GameObject:
   m_ObjectHideFlags: 0

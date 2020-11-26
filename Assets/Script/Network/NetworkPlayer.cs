@@ -65,4 +65,13 @@ public class NetworkPlayer : MonoBehaviour
         target.rotation = rigTransform.rotation;
     }
     
+
+    private void updateAnimation(InputDevice inputDevice, Animator animator)
+    {
+        inputDevice.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggered);
+        if (triggered)
+            animator.SetTrigger("Selected");
+        else
+            animator.SetTrigger("Deselected");
+    }
 }
