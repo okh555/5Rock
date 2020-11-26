@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
+using Photon.Pun;
 
 public class XRJoyStick : XRBaseInteractable
 {
@@ -18,6 +19,7 @@ public class XRJoyStick : XRBaseInteractable
 
     XRBaseInteractor selectingInteractor;
 
+    public PhotonView pv;
 
     protected override void OnSelectEnter(XRBaseInteractor interactor)
     {
@@ -26,6 +28,9 @@ public class XRJoyStick : XRBaseInteractable
         base.OnSelectEnter(interactor);
 
         selectingInteractor = interactor;
+
+        if (pv != null)
+            pv.GetComponent<PhotonView>();
     }
 
     protected override void OnSelectExit(XRBaseInteractor interactor)

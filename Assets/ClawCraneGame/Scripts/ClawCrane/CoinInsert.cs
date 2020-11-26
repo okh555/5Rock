@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
+using Photon.Pun;
 
-public class CoinInsert : XRBaseInteractor
+public class CoinInsert : XRBaseInteractor, IPunObservable
 {
     [System.Serializable]
     public class CoinInsertEvent : UnityEvent<CoinInsert> { }
@@ -19,7 +20,10 @@ public class CoinInsert : XRBaseInteractor
     public Vector3 RemovePosition;
 
     XRBaseInteractable triggerdInteractable;
+    private PhotonView pv;
 
+    // CoinCount: 게임기마다의 coin 개수
+    // 
 
     protected override void OnSelectEnter(XRBaseInteractable interactable)
     {
@@ -27,10 +31,11 @@ public class CoinInsert : XRBaseInteractor
 
         if (Coin == null)
         {
-            AddCoin(interactable.gameObject);
+            pv.RPC("AddCoin", RpcTarget.AllBuffered, interactable.gameObject);
         }
     }
 
+    [PunRPC]
     void AddCoin(GameObject coin)
     {
         Coin = coin;
@@ -45,6 +50,7 @@ public class CoinInsert : XRBaseInteractor
         StartCoroutine(CoinInsertDelayed());
     }
 
+    [PunRPC]
     public bool UseCoin()
     {
         if (CoinCount > 0)
@@ -57,14 +63,21 @@ public class CoinInsert : XRBaseInteractor
         return false;
     }
 
+    [PunRPC]
     IEnumerator CoinInsertDelayed()
     {
         yield return new WaitForSeconds(CoinInsertDelay);
         if (Coin != null)
         {
-            Destroy(Coin);
+            PhotonNetwork.Destroy(Coin);
         }
     }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting) stream.SendNext(CoinCount);
+        else CoinCount = (int)stream.ReceiveNext();
+    } 
 
     private void OnTriggerEnter(Collider other)
     {

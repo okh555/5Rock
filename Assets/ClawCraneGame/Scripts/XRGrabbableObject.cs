@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using Photon.Pun;
 
 public class XRGrabbableObject : XRGrabInteractable
 {
@@ -14,6 +15,8 @@ public class XRGrabbableObject : XRGrabInteractable
     public bool isNotGrabbableOnStart = false;
     LayerMask DefaultLayerMask;
 
+    private PhotonView pv;
+
     private void Start()
     {
         if (SelectRecognitionTime < 0f)
@@ -24,6 +27,8 @@ public class XRGrabbableObject : XRGrabInteractable
         DefaultLayerMask = interactionLayerMask;
         if (isNotGrabbableOnStart)
             interactionLayerMask = 0;
+
+        pv = GetComponent<PhotonView>();
     }
 
     protected override void OnSelectEnter(XRBaseInteractor interactor)
@@ -33,6 +38,9 @@ public class XRGrabbableObject : XRGrabInteractable
         canSelect = true;
         isSelectExit = false;
         selectRecognitionTimeVal = 0f;
+
+        if (pv != null)
+            pv.RequestOwnership();
     }
 
     protected override void OnSelectExit(XRBaseInteractor interactor)

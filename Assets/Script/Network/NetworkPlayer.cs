@@ -39,10 +39,9 @@ public class NetworkPlayer : MonoBehaviour
 
         if (photonView.IsMine)
         {
-            foreach(var item in GetComponentsInChildren<Renderer>())
-            {
-                item.enabled = false;
-            }
+            leftHandAnimator.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+            rightHandAnimator.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+            head.GetComponentInChildren<MeshRenderer>().enabled = false;
         }
     }
 
@@ -55,7 +54,6 @@ public class NetworkPlayer : MonoBehaviour
             MapPosition(head, headRig);
             MapPosition(leftHand, leftHandRig);
             MapPosition(rightHand, rightHandRig);
-
         }
     }
 

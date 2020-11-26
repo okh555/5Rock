@@ -53,6 +53,7 @@ public class ButtonObjectInteractable : MonoBehaviour
 
         float newDistance = Mathf.Clamp(m_CurrentDistance + move, 0, MaxDistance);
 
+        // 줄 길이 변수
         m_Rigidbody.position = m_StartPosition + worldAxis * newDistance;
 
         if (!m_Pressed && Mathf.Approximately(newDistance, MaxDistance))
