@@ -1541,6 +1541,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 858314763, guid: 5da80694cd5fb404ba62239c876cdb98, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 858314764, guid: 5da80694cd5fb404ba62239c876cdb98, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 858314765, guid: 5da80694cd5fb404ba62239c876cdb98, type: 3}
       propertyPath: m_MaxRaycastDistance
       value: 1
@@ -1568,7 +1576,7 @@ PrefabInstance:
     - target: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1837324664885972822, guid: 5da80694cd5fb404ba62239c876cdb98,
         type: 3}
@@ -1609,6 +1617,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5229998399325284838, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_LineWidth
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5229998399325284838, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_LineLength
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535159151808104062, guid: 5da80694cd5fb404ba62239c876cdb98,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da80694cd5fb404ba62239c876cdb98, type: 3}
