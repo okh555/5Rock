@@ -346,13 +346,13 @@ MonoBehaviour:
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: Selected
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: Deselected
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: Pointing
   m_SynchronizeLayers:
   - SynchronizeType: 0
@@ -373,13 +373,13 @@ MonoBehaviour:
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: Selected
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: Deselected
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: Pointing
   m_SynchronizeLayers:
   - SynchronizeType: 0

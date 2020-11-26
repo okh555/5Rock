@@ -19,9 +19,6 @@ public class NetworkPlayer : MonoBehaviour
     private Transform leftHandRig;
     private Transform rightHandRig;
 
-    private XRController leftController;
-    private XRController rightController;
-
     private PhotonView photonView;
 
     // Start is called before the first frame update
@@ -33,9 +30,6 @@ public class NetworkPlayer : MonoBehaviour
         headRig = xrRig.transform.Find("Camera Offset/Main Camera");
         leftHandRig = xrRig.transform.Find("Camera Offset/LeftHand Controller");
         rightHandRig = xrRig.transform.Find("Camera Offset/RightHand Controller");
-
-        leftController = leftHandRig.GetComponent<XRController>();
-        rightController = rightHandRig.GetComponent<XRController>();
 
         if (photonView.IsMine)
         {
@@ -54,6 +48,9 @@ public class NetworkPlayer : MonoBehaviour
             MapPosition(head, headRig);
             MapPosition(leftHand, leftHandRig);
             MapPosition(rightHand, rightHandRig);
+
+            updateAnimation(InputDevices.GetDeviceAtXRNode(XRNode.LeftHand), leftHandAnimator);
+            updateAnimation(InputDevices.GetDeviceAtXRNode(XRNode.RightHand), rightHandAnimator);
         }
     }
 
@@ -63,4 +60,12 @@ public class NetworkPlayer : MonoBehaviour
         target.rotation = rigTransform.rotation;
     }
     
+    private void updateAnimation(InputDevice inputDevice, Animator animator)
+    {
+        inputDevice.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggered);
+        if (triggered)
+            animator.SetTrigger("Selected");
+        else
+            animator.SetTrigger("Deselected");
+    }
 }

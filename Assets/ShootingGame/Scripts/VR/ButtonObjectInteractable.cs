@@ -1,8 +1,9 @@
 ﻿using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using Photon.Pun;
 
-public class ButtonObjectInteractable : MonoBehaviour
+public class ButtonObjectInteractable : MonoBehaviour, IPunObservable
 {
     [System.Serializable]
     public class ButtonPressedEvent : UnityEvent { }
@@ -77,6 +78,18 @@ public class ButtonObjectInteractable : MonoBehaviour
             //    Volume = 1.0f
             //}, 0.0f);
             OnButtonReleased.Invoke();
+        }
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(m_Pressed);
+        }
+        else
+        {
+            m_Pressed = (bool)stream.ReceiveNext();
         }
     }
 

@@ -20,7 +20,7 @@ public class CoinInsert : XRBaseInteractor, IPunObservable
     public Vector3 RemovePosition;
 
     XRBaseInteractable triggerdInteractable;
-    private PhotonView pv;
+    public PhotonView pv;
 
     // CoinCount: 게임기마다의 coin 개수
     // 
