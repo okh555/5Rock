@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class CraneGame : MonoBehaviour
+public class CraneGame : MonoBehaviour, IPunObservable
 {
     public CoinInsert coinInsert;
 
@@ -374,5 +375,19 @@ public class CraneGame : MonoBehaviour
             MoveForward();
         else if (newValue.y == -1f)
             MoveBackward();
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if(stream.IsWriting)
+        {
+            stream.SendNext(craneState);
+            stream.SendNext(isObjectTriggered);
+        }
+        else
+        {
+            craneState = (CraneState)stream.ReceiveNext();
+            isObjectTriggered = (bool)stream.ReceiveNext();
+        }
     }
 }
