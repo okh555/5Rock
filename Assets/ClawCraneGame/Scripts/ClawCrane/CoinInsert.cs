@@ -21,6 +21,8 @@ public class CoinInsert : XRBaseInteractor
 
     XRBaseInteractable triggerdInteractable;
 
+    
+
     protected override void OnSelectEnter(XRBaseInteractable interactable)
     {
         base.OnSelectEnter(interactable);
@@ -34,14 +36,14 @@ public class CoinInsert : XRBaseInteractor
     void AddCoin(GameObject coin)
     {
         Coin = coin;
-        Coin.transform.localPosition = transform.position + RemovePosition;
         CoinCount++;
+        Coin.transform.localPosition = transform.position + RemovePosition;
 
         if (OnCoinInsert.GetPersistentEventCount() > 0)
         {
             UseCoin();
         }
-
+        
         StartCoroutine(CoinInsertDelayed());
     }
 

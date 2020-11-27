@@ -68,7 +68,7 @@ public class HockeyManager : MonoBehaviour
             player1 = Instantiate(HockeyStriker, player1Pos.position, HockeyStriker.transform.rotation);
             player1.transform.parent = gameObject.transform;
         }
-        if (Random.Range(0,1)  == 0)
+        if (Random.Range(0,2)  == 0)
         {
             puck.GetComponent<Rigidbody>().AddForce(new Vector3(20f, 0, 0));
         }

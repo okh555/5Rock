@@ -148,7 +148,7 @@ MonoBehaviour:
       m_Calls: []
   CoinType: Coin
   CoinInsertDelay: 0.2
-  RemovePosition: {x: 0, y: 0, z: 0.5}
+  RemovePosition: {x: 0, y: -100000, z: 0.5}
 --- !u!65 &9187297836719526728
 BoxCollider:
   m_ObjectHideFlags: 0

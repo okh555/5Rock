@@ -51,7 +51,8 @@ public class CraneGame : MonoBehaviour
     {
         joyStick.OnJoyStickChange += JoyStickInput;
         clawObjectTrigger.OnObjectEnter += ObjectTrigger;
-        SetNewState(CraneState.NOTSTART);
+        //SetNewState(CraneState.NOTSTART);
+        SetNewState(CraneState.START);
     }
 
     private void ObjectTrigger()
@@ -356,7 +357,7 @@ public class CraneGame : MonoBehaviour
         String.position = centerPos;
 
         Vector3 newScale = String.localScale;
-        newScale.z = stringLength * 3f;
+        newScale.z = stringLength;
         String.localScale = newScale;
 
         String.LookAt(StringStart);
