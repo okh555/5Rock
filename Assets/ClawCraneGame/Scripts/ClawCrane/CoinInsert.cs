@@ -27,8 +27,8 @@ public class CoinInsert : XRBaseInteractor, IPunObservable
 
         if (Coin == null)
         {
-            AddCoin(interactable.gameObject);
-            //GetComponent<PhotonView>().RPC("AddCoin", RpcTarget.AllBuffered, interactable.gameObject);
+            //AddCoin(interactable.gameObject);
+            GetComponent<PhotonView>().RPC("AddCoin", RpcTarget.AllBuffered, interactable.gameObject);
         }
     }
 

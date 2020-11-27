@@ -384,6 +384,7 @@ GameObject:
   - component: {fileID: 6186446468253051862}
   - component: {fileID: 2916235814262983903}
   - component: {fileID: 9170019583457966540}
+  - component: {fileID: 2064376663}
   m_Layer: 0
   m_Name: ShooterController
   m_TagString: Untagged
@@ -495,6 +496,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2064376663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081240177950635039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 1
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1 &1559216754066105074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,6 +1068,7 @@ GameObject:
   - component: {fileID: 7065515065047381045}
   - component: {fileID: 2307501314190759557}
   - component: {fileID: 5773924863917772246}
+  - component: {fileID: 1401179999}
   m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
@@ -1193,6 +1211,21 @@ MonoBehaviour:
   RotateAxis: 0
   handleRotateSpeed: 120
   handleActiveEventOccurValue: 360
+--- !u!114 &1401179999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3931269135357182896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
 --- !u!1 &4104551434893853548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,6 +1469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8609900487478404289}
   - component: {fileID: 6741956435097646703}
+  - component: {fileID: 1401179995}
   m_Layer: 0
   m_Name: Coin_Pusher_Fix2
   m_TagString: Untagged
@@ -1452,7 +1486,7 @@ Transform:
   m_GameObject: {fileID: 4694962172873807570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.83458, y: 0.81390744, z: 0.83458}
   m_Children:
   - {fileID: 3457300778777538843}
   - {fileID: 68362824332576109}
@@ -1486,6 +1520,56 @@ MonoBehaviour:
   CoinExhaustPos: {fileID: 3427862163251679250}
   coinExhaustDelay: 0.2
   ExhaustCoinCountText: {fileID: 4434660421822582980}
+--- !u!114 &1401179995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4694962172873807570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 1
+  ObservedComponents:
+  - {fileID: 1401179991}
+  - {fileID: 2064376663}
+  - {fileID: 7684071792329402102}
+  - {fileID: 5773924863917772246}
+  - {fileID: 1401179999}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &1401179992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4765185786435711402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 1
+  ObservedComponents:
+  - {fileID: 7733961055223138131}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &4809592428162208873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,6 +1610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4440888688282354441}
   - component: {fileID: 1450331573173830687}
+  - component: {fileID: 1401179991}
   m_Layer: 0
   m_Name: Pusher
   m_TagString: Untagged
@@ -1564,6 +1649,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1401179991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5168272041852997982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 1
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1 &5942848078666006038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,6 +2008,8 @@ GameObject:
   - component: {fileID: 4111366229457681433}
   - component: {fileID: 7900168609104996105}
   - component: {fileID: 6544109611805279482}
+  - component: {fileID: 1401179990}
+  - component: {fileID: 1401180004}
   m_Layer: 0
   m_Name: CoinShooter
   m_TagString: Untagged
@@ -1993,6 +2096,46 @@ MonoBehaviour:
   FirePoint: {fileID: 8202832464797746844}
   coinAddChargeSize: 50
   CoinCountText: {fileID: 4557586934009842500}
+  pv: {fileID: 1401180004}
+--- !u!114 &1401179990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8946264193843802254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+--- !u!114 &1401180004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8946264193843802254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 6544109611805279482}
+  - {fileID: 1401179990}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &9016518643903563537
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,6 +2310,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1326028437923374637}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7733961055223138131 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8733169401156264318, guid: dc0f422d707cd2940a99e9ba0fbc727d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1326028437923374637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4765185786435711402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa49a9b8a7b318648a0765605b7ed579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4765185786435711402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5784777992932726663, guid: dc0f422d707cd2940a99e9ba0fbc727d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1326028437923374637}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8359743328650938795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2277,3 +2438,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8359743328650938795}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7684071792329402102 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2206914273199451997, guid: 15beb92f76c01804f9cb5e94c3825cc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 8359743328650938795}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e37042690002b441abad75b69b63006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
