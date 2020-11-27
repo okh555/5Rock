@@ -18,7 +18,6 @@ public class XRJoyStick : XRBaseInteractable
 
     XRBaseInteractor selectingInteractor;
 
-
     protected override void OnSelectEnter(XRBaseInteractor interactor)
     {
         if (!interactor)

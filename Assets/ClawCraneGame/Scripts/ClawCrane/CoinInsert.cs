@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 using Photon.Pun;
 
-public class CoinInsert : XRBaseInteractor, IPunObservable
+public class CoinInsert : XRBaseInteractor
 {
     [System.Serializable]
     public class CoinInsertEvent : UnityEvent<CoinInsert> { }
@@ -27,12 +27,10 @@ public class CoinInsert : XRBaseInteractor, IPunObservable
 
         if (Coin == null)
         {
-            //AddCoin(interactable.gameObject);
-            GetComponent<PhotonView>().RPC("AddCoin", RpcTarget.AllBuffered, interactable.gameObject);
+            AddCoin(interactable.gameObject);
         }
     }
 
-    [PunRPC]
     void AddCoin(GameObject coin)
     {
         Coin = coin;
@@ -41,8 +39,7 @@ public class CoinInsert : XRBaseInteractor, IPunObservable
 
         if (OnCoinInsert.GetPersistentEventCount() > 0)
         {
-            //UseCoin();
-            GetComponent<PhotonView>().RPC("useCoinRPC", RpcTarget.AllBuffered);
+            UseCoin();
         }
 
         StartCoroutine(CoinInsertDelayed());
@@ -60,23 +57,12 @@ public class CoinInsert : XRBaseInteractor, IPunObservable
         return false;
     }
 
-    [PunRPC]
-    public void useCoinRPC()
-    {
-        if (CoinCount > 0)
-        {
-            OnCoinInsert.Invoke(this);
-            CoinCount--;
-            return;
-        }
-    }
-
     IEnumerator CoinInsertDelayed()
     {
         yield return new WaitForSeconds(CoinInsertDelay);
         if (Coin != null)
         {
-            PhotonNetwork.Destroy(Coin);
+            Destroy(Coin);
         }
     }
 
@@ -112,13 +98,5 @@ public class CoinInsert : XRBaseInteractor, IPunObservable
 
         if (triggerdInteractable != null && selectTarget != triggerdInteractable)
             validTargets.Add(triggerdInteractable);
-    }
-
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if (stream.IsWriting)
-            stream.SendNext(CoinCount);
-        else
-            CoinCount = (int)stream.ReceiveNext();
     }
 }

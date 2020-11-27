@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using Photon.Pun;
 
-public class CoinShooter : MonoBehaviour, IPunObservable
+public class CoinShooter : MonoBehaviour
 {
     public GameObject CoinPrefab;
     public Transform FirePoint;
@@ -20,13 +20,10 @@ public class CoinShooter : MonoBehaviour, IPunObservable
 
     const float MaxRotateAngle = 15f;
 
-    public PhotonView pv;
-
     public void AddCoin()
     {
         coinCount += coinAddChargeSize;
-        //UpdateCoinCountText();
-        pv.RPC("UpdateCoinCountText", RpcTarget.AllBuffered);
+        UpdateCoinCountText();
     }
 
     [PunRPC]
@@ -43,8 +40,7 @@ public class CoinShooter : MonoBehaviour, IPunObservable
             rigid.AddTorque(randomTorque * shootRandomTorqueValue);
 
             coinCount--;
-            //UpdateCoinCountText();
-            pv.RPC("UpdateCoinCountText", RpcTarget.AllBuffered);
+            UpdateCoinCountText();
         }
     }
 
@@ -54,7 +50,6 @@ public class CoinShooter : MonoBehaviour, IPunObservable
         transform.localRotation = Quaternion.Euler(-135f, -MaxRotateAngle + (newAngle / 2), 0f);
     }
 
-    [PunRPC]
     void UpdateCoinCountText()
     {
         if (CoinCountText)
@@ -62,20 +57,6 @@ public class CoinShooter : MonoBehaviour, IPunObservable
             int newCoinCount = (coinCount > 99) ? 99 : coinCount;
             Debug.Log(coinCount);
             CoinCountText.text = string.Format("{0:00}", newCoinCount);
-        }
-    }
-
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if(stream.IsWriting)
-        {
-            //stream.SendNext(CoinCountText.text);
-            stream.SendNext(coinCount);
-        }
-        else
-        {
-            //CoinCountText.text = (string)stream.ReceiveNext();
-            coinCount = (int)stream.ReceiveNext();
         }
     }
 }

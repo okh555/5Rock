@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class CraneGame : MonoBehaviour, IPunObservable
+public class CraneGame : MonoBehaviour
 {
     public CoinInsert coinInsert;
 
@@ -374,20 +374,5 @@ public class CraneGame : MonoBehaviour, IPunObservable
             MoveForward();
         else if (newValue.y == -1f)
             MoveBackward();
-    }
-
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if(stream.IsWriting)
-        {
-            stream.SendNext(craneState);
-            stream.SendNext(isObjectTriggered);
-            //stream.SendNext()
-        }
-        else
-        {
-            craneState = (CraneState)stream.ReceiveNext();
-            isObjectTriggered = (bool)stream.ReceiveNext();
-        }
     }
 }
