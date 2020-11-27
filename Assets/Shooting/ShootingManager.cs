@@ -38,8 +38,12 @@ public class ShootingManager : MonoBehaviour
 
             if(time > timeLimit)
             {
+                time = timeLimit;
+
                 StopShooting();
             }
+
+            timeText.text = "Time : " + time.ToString();
         }
     }
 
@@ -53,7 +57,12 @@ public class ShootingManager : MonoBehaviour
 
     public void StartShooting()
     {
+        if (isGameStart) return;
+
         Init();
+
+        isGameStart = true;
+        shootingGun.Reload();
 
         foreach (var target in targets)
         {
@@ -74,8 +83,9 @@ public class ShootingManager : MonoBehaviour
 
     void AddScore(int newScore)
     {
+        if (!isGameStart) return;
+
         score += newScore;
-        //hitTargetCount++;
 
         scoreText.text = "Score : " + score.ToString();
     }
