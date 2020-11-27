@@ -25,8 +25,8 @@ public class CoinShooter : MonoBehaviour, IPunObservable
     public void AddCoin()
     {
         coinCount += coinAddChargeSize;
-        UpdateCoinCountText();
-        //pv.RPC("UpdateCoinCountText", RpcTarget.AllBuffered);
+        //UpdateCoinCountText();
+        pv.RPC("UpdateCoinCountText", RpcTarget.AllBuffered);
     }
 
     [PunRPC]
@@ -43,8 +43,8 @@ public class CoinShooter : MonoBehaviour, IPunObservable
             rigid.AddTorque(randomTorque * shootRandomTorqueValue);
 
             coinCount--;
-            UpdateCoinCountText();
-            //pv.RPC("UpdateCoinCountText", RpcTarget.AllBuffered);
+            //UpdateCoinCountText();
+            pv.RPC("UpdateCoinCountText", RpcTarget.AllBuffered);
         }
     }
 
