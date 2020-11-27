@@ -31,8 +31,7 @@ public class CoinShooter : MonoBehaviour
     {
         if (coinCount > 0)
         {
-            //GameObject coin = PhotonNetwork.Instantiate(CoinPrefab, FirePoint.position, FirePoint.rotation);
-            GameObject coin = PhotonNetwork.Instantiate("Coin", FirePoint.position, FirePoint.rotation);
+            GameObject coin = Instantiate(CoinPrefab, FirePoint.position, FirePoint.rotation);
             Rigidbody rigid = coin.GetComponent<Rigidbody>();
             float randomSpeed = Random.Range(-shootRandomSpeed, shootRandomSpeed);
             rigid.velocity = FirePoint.transform.forward * (shootSpeed + randomSpeed);
