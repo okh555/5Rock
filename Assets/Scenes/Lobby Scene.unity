@@ -1551,7 +1551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 858314765, guid: 5da80694cd5fb404ba62239c876cdb98, type: 3}
       propertyPath: m_MaxRaycastDistance
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1837324664885972817, guid: 5da80694cd5fb404ba62239c876cdb98,
         type: 3}

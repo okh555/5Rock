@@ -20,18 +20,22 @@ public class CoinShooter : MonoBehaviour, IPunObservable
 
     const float MaxRotateAngle = 15f;
 
+    public PhotonView pv;
 
     public void AddCoin()
     {
         coinCount += coinAddChargeSize;
         UpdateCoinCountText();
+        //pv.RPC("UpdateCoinCountText", RpcTarget.AllBuffered);
     }
 
+    [PunRPC]
     public void ShootCoin()
     {
         if (coinCount > 0)
         {
-            GameObject coin = Instantiate(CoinPrefab, FirePoint.position, FirePoint.rotation);
+            //GameObject coin = PhotonNetwork.Instantiate(CoinPrefab, FirePoint.position, FirePoint.rotation);
+            GameObject coin = PhotonNetwork.Instantiate("Coin", FirePoint.position, FirePoint.rotation);
             Rigidbody rigid = coin.GetComponent<Rigidbody>();
             float randomSpeed = Random.Range(-shootRandomSpeed, shootRandomSpeed);
             rigid.velocity = FirePoint.transform.forward * (shootSpeed + randomSpeed);
@@ -40,6 +44,7 @@ public class CoinShooter : MonoBehaviour, IPunObservable
 
             coinCount--;
             UpdateCoinCountText();
+            //pv.RPC("UpdateCoinCountText", RpcTarget.AllBuffered);
         }
     }
 
@@ -49,11 +54,13 @@ public class CoinShooter : MonoBehaviour, IPunObservable
         transform.localRotation = Quaternion.Euler(-135f, -MaxRotateAngle + (newAngle / 2), 0f);
     }
 
+    [PunRPC]
     void UpdateCoinCountText()
     {
         if (CoinCountText)
         {
             int newCoinCount = (coinCount > 99) ? 99 : coinCount;
+            Debug.Log(coinCount);
             CoinCountText.text = string.Format("{0:00}", newCoinCount);
         }
     }
@@ -62,11 +69,13 @@ public class CoinShooter : MonoBehaviour, IPunObservable
     {
         if(stream.IsWriting)
         {
-            stream.SendNext(CoinCountText.text);
+            //stream.SendNext(CoinCountText.text);
+            stream.SendNext(coinCount);
         }
         else
         {
-            CoinCountText.text = (string)stream.ReceiveNext();
+            //CoinCountText.text = (string)stream.ReceiveNext();
+            coinCount = (int)stream.ReceiveNext();
         }
     }
 }

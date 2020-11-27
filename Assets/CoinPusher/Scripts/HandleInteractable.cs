@@ -11,7 +11,6 @@ public class HandleInteractable : XRBaseInteractable, IPunObservable
     public class HandleActiveEvent : UnityEvent<HandleInteractable> { }
     public HandleActiveEvent OnHandleActive;
 
-
     public enum HandleRotateAxis
     {
         X, Y, Z

@@ -21,20 +21,17 @@ public class CoinInsert : XRBaseInteractor, IPunObservable
 
     XRBaseInteractable triggerdInteractable;
 
-    public PhotonView pv;
-
     protected override void OnSelectEnter(XRBaseInteractable interactable)
     {
         base.OnSelectEnter(interactable);
 
         if (Coin == null)
         {
-            //AddCoin(interactable.gameObject);
-            pv.RPC("AddCoin", RpcTarget.AllBuffered, interactable.gameObject);
+            AddCoin(interactable.gameObject);
+            //GetComponent<PhotonView>().RPC("AddCoin", RpcTarget.AllBuffered, interactable.gameObject);
         }
     }
 
-    [PunRPC]
     void AddCoin(GameObject coin)
     {
         Coin = coin;
@@ -44,13 +41,12 @@ public class CoinInsert : XRBaseInteractor, IPunObservable
         if (OnCoinInsert.GetPersistentEventCount() > 0)
         {
             //UseCoin();
-            pv.RPC("UseCoin", RpcTarget.AllBuffered);
+            GetComponent<PhotonView>().RPC("useCoinRPC", RpcTarget.AllBuffered);
         }
 
         StartCoroutine(CoinInsertDelayed());
     }
 
-    [PunRPC]
     public bool UseCoin()
     {
         if (CoinCount > 0)
@@ -61,6 +57,17 @@ public class CoinInsert : XRBaseInteractor, IPunObservable
         }
 
         return false;
+    }
+
+    [PunRPC]
+    public void useCoinRPC()
+    {
+        if (CoinCount > 0)
+        {
+            OnCoinInsert.Invoke(this);
+            CoinCount--;
+            return;
+        }
     }
 
     IEnumerator CoinInsertDelayed()

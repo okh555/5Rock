@@ -35,7 +35,6 @@ public class CraneGame : MonoBehaviour, IPunObservable
 
     public float defaultWaitTime = 0.5f;
 
-
     public Vector3 CraneInitPosition;
     public Vector3 CraneGoalPosition;
 
@@ -357,7 +356,7 @@ public class CraneGame : MonoBehaviour, IPunObservable
         String.position = centerPos;
 
         Vector3 newScale = String.localScale;
-        newScale.z = stringLength;
+        newScale.z = stringLength * 3f;
         String.localScale = newScale;
 
         String.LookAt(StringStart);
@@ -383,6 +382,7 @@ public class CraneGame : MonoBehaviour, IPunObservable
         {
             stream.SendNext(craneState);
             stream.SendNext(isObjectTriggered);
+            //stream.SendNext()
         }
         else
         {
