@@ -20,11 +20,13 @@ public class HockeyManager : MonoBehaviour
     GameObject player1;
     GameObject player2;
 
+    bool start = false;
+
 
     // Start is called before the first frame update
     void Awake()
     {
-        Reset();
+     //   Reset();
         ScoreBoard = GetComponentInChildren<TMP_Text>();
     }
 
@@ -32,6 +34,11 @@ public class HockeyManager : MonoBehaviour
     void Update()
     {
         ScoreBoard.SetText(player1_score + " : " + player2_score);
+        if(start == true)
+        {
+            Reset();
+            start = false;
+        }
     }
 
     public void Score(bool player)
@@ -70,6 +77,12 @@ public class HockeyManager : MonoBehaviour
             puck.GetComponent<Rigidbody>().AddForce(new Vector3(-20f, 0, 0));
         }
 
+    }
+
+
+    public void _Start()
+    {
+        start = true;
     }
 
 }
