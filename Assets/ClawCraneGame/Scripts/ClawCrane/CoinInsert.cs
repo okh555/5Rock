@@ -32,6 +32,7 @@ public class CoinInsert : XRBaseInteractor, IPunObservable
         }
     }
 
+    [PunRPC]
     void AddCoin(GameObject coin)
     {
         Coin = coin;
