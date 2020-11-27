@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Photon.Pun;
 
-public class ButtonObjectInteractable : MonoBehaviour, IPunObservable
+public class ButtonObjectInteractable : MonoBehaviour
 {
     [System.Serializable]
     public class ButtonPressedEvent : UnityEvent { }
@@ -77,18 +77,6 @@ public class ButtonObjectInteractable : MonoBehaviour, IPunObservable
             //    Volume = 1.0f
             //}, 0.0f);
             OnButtonReleased.Invoke();
-        }
-    }
-
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if (stream.IsWriting)
-        {
-            stream.SendNext(m_Pressed);
-        }
-        else
-        {
-            m_Pressed = (bool)stream.ReceiveNext();
         }
     }
 
