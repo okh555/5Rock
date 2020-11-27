@@ -31,7 +31,6 @@ public class _Arrow : XRGrabInteractable
     {
         if (Physics.Linecast(lastPosition, tip.position))
         {
-            Debug.Log("Stop");
             Stop();
         }
     }

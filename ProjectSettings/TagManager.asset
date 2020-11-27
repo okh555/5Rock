@@ -8,6 +8,7 @@ TagManager:
   - BasketBall
   - Wall
   - HockeyGround
+  - HockeyStriker
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ignore
   - 
   - 
   - 

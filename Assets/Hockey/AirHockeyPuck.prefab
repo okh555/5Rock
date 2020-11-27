@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1176277587252562622}
   - component: {fileID: 2867089730008601379}
   - component: {fileID: 406774755983837387}
-  - component: {fileID: 6718523504424936048}
+  - component: {fileID: 4808714452150443978}
   m_Layer: 0
   m_Name: AirHockeyPuck
   m_TagString: Untagged
@@ -111,7 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb399a71e31dd7a448133e65a7d9e19a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &6718523504424936048
+  maxSpeed: 3
+--- !u!135 &4808714452150443978
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
