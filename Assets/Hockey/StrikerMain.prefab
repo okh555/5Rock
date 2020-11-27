@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 3672322012731951423}
   - component: {fileID: 3672322012728527135}
   - component: {fileID: 3672322012729658335}
-  - component: {fileID: 401958354612953584}
-  - component: {fileID: 3817284224866888418}
+  - component: {fileID: 2857164581533267760}
   m_Layer: 0
   m_Name: Striker
   m_TagString: Untagged
@@ -81,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &401958354612953584
-BoxCollider:
+--- !u!64 &2857164581533267760
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -91,23 +90,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.019999998, y: 0.020000003, z: 0.00328688}
-  m_Center: {x: -6.7732553e-10, y: -0.0000000033866276, z: -0.0033266114}
---- !u!136 &3817284224866888418
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3672322012731921695}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.0039086225
-  m_Height: 0.013998104
-  m_Direction: 2
-  m_Center: {x: -0.0001081445, y: -0.0000000033866279, z: 0.0024525085}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 93aed2410a4e64bf78f72fd2ec80a95b, type: 3}
 --- !u!1 &3966123571887361725
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2106552782485628230}
   - component: {fileID: -436537198711949229}
-  - component: {fileID: 219198466211949514}
+  - component: {fileID: 5028780312959548620}
   m_Layer: 0
   m_Name: StrikerMain
   m_TagString: Untagged
@@ -188,7 +174,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &219198466211949514
+--- !u!114 &5028780312959548620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,7 +183,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8067881715073396245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1005a4ba60ae67648888ffb8cbef3194, type: 3}
+  m_Script: {fileID: 11500000, guid: d87f47a4c6e9cc640b56581a42604584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -230,7 +216,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_CustomReticle: {fileID: 0}
-  m_AttachTransform: {fileID: 3966123571887361722}
+  m_AttachTransform: {fileID: 0}
   m_AttachEaseInTime: 0.15
   m_MovementType: 1
   m_TrackPosition: 1
@@ -263,3 +249,5 @@ MonoBehaviour:
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
   SelectRecognitionTime: 0.1
+  currentPos: {x: 0, y: 0, z: 0}
+  currentRot: {x: 0, y: 0, z: 0, w: 0}

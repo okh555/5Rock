@@ -5,6 +5,24 @@ public class _Notch : XRSocketInteractor
 {
     private _Puller puller;
     private _Arrow currentArrow;
+
+    private float waitTime = 0.05f;
+    private float releaseTime = 0;
+
+
+    void Update()
+    {
+        if (releaseTime != 0)
+        {
+            if (Time.time - releaseTime > waitTime)
+            {
+                socketActive = true;
+                releaseTime = 0;
+            }
+        }
+    }
+
+
     protected override void Awake()
     {
         base.Awake();
@@ -13,14 +31,18 @@ public class _Notch : XRSocketInteractor
 
     protected override void OnEnable()
     {
+
         base.OnEnable();
         puller.onSelectExit.AddListener(TryToReleaseArrow);
+        Debug.Log("Enable");
+
     }
 
     protected override void OnDisable()
     {
         base.OnDisable();
         puller.onSelectExit.RemoveListener(TryToReleaseArrow);
+        Debug.Log("Disable");
 
     }
 
@@ -44,6 +66,8 @@ public class _Notch : XRSocketInteractor
         {
             ForceDeselect();
             ReleaseArrow();
+            releaseTime = Time.time;
+            socketActive = false;
         }
     }
 
@@ -56,6 +80,7 @@ public class _Notch : XRSocketInteractor
     private void ReleaseArrow()
     {
         currentArrow.Release(puller.PullAmount);
+        Debug.Log("Release");
         currentArrow = null;
     }
 
