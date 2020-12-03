@@ -31,7 +31,7 @@ public class SpawnBilliardBall : MonoBehaviour
             GetComponent<PhotonView>().RPC("isSpawning", RpcTarget.AllBuffered);
         }
 
-        if ()
+        if (!isInstantiate)
         {
             spawnedBalls = PhotonNetwork.Instantiate("8Balls", spawnPosition.position, Quaternion.Euler(0, 0, 0));
             spawnedBalls.transform.position = spawnPosition.position;
