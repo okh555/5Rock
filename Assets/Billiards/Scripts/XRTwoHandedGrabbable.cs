@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using Photon.Pun;
 
 public class XRTwoHandedGrabbable : XRGrabbableObject
 {
@@ -11,6 +12,7 @@ public class XRTwoHandedGrabbable : XRGrabbableObject
     private XRBaseInteractor secondHand;
     private Vector3 vec;
 
+    public PhotonView pv;
 
     protected override void Awake()
     {
@@ -43,6 +45,11 @@ public class XRTwoHandedGrabbable : XRGrabbableObject
         base.OnSelectEnter(interactor);
 
         ActiveSecondGrab(true);
+
+        if(pv)
+        {
+            pv.RequestOwnership();
+        }
     }
 
     protected override void OnSelectExit(XRBaseInteractor interactor)

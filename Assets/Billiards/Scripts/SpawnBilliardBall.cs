@@ -13,6 +13,8 @@ public class SpawnBilliardBall : MonoBehaviour
 
     public float CushionFriction = 0.2F;
 
+    public bool isInstantiate = false;
+
     void Start()
     {
         //SpawnBall();
@@ -25,9 +27,17 @@ public class SpawnBilliardBall : MonoBehaviour
             PhotonNetwork.Destroy(spawnedBalls);
         }
 
-        spawnedBalls = PhotonNetwork.Instantiate("8Balls", spawnPosition.position, Quaternion.Euler(0, 0, 0));
-        spawnedBalls.transform.position = spawnPosition.position;
+
+        if (!isInstantiate)
+        {
+            spawnedBalls = PhotonNetwork.Instantiate("8Balls", spawnPosition.position, Quaternion.Euler(0, 0, 0));
+            spawnedBalls.transform.position = spawnPosition.position;
+            GetComponent<PhotonView>().RPC("isSpawning", RpcTarget.AllBuffered);
+        }
     }
+
+    [PunRPC]
+    void isSpawning() => isInstantiate = !isInstantiate;
 
     [PunRPC]
     void cushionRPC(int otherPVID, Vector3 normal)
