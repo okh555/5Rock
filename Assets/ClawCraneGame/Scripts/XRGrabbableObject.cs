@@ -127,8 +127,8 @@ public class XRGrabbableObject : XRGrabInteractable, IPunObservable
         }
         else
         {
-            curPos = (Vector3)stream.ReceiveNext();
-            curRot = (Quaternion)stream.ReceiveNext();
+            this.transform.position = (Vector3)stream.ReceiveNext();
+            this.transform.rotation = (Quaternion)stream.ReceiveNext();
         }
     }
 }
