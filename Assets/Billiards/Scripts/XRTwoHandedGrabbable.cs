@@ -12,8 +12,6 @@ public class XRTwoHandedGrabbable : XRGrabbableObject
     private XRBaseInteractor secondHand;
     private Vector3 vec;
 
-    public PhotonView pv;
-
     protected override void Awake()
     {
         base.Awake();
@@ -45,11 +43,6 @@ public class XRTwoHandedGrabbable : XRGrabbableObject
         base.OnSelectEnter(interactor);
 
         ActiveSecondGrab(true);
-
-        if(pv)
-        {
-            pv.RequestOwnership();
-        }
     }
 
     protected override void OnSelectExit(XRBaseInteractor interactor)

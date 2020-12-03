@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using Photon.Pun;
 
-public class XRGrabbableObject : XRGrabInteractable
+public class XRGrabbableObject : XRGrabInteractable, IPunObservable
 {
     bool isSelectExit = false;
     float selectRecognitionTimeVal = 0f;
@@ -14,6 +14,18 @@ public class XRGrabbableObject : XRGrabInteractable
 
     public bool isNotGrabbableOnStart = false;
     LayerMask DefaultLayerMask;
+
+    /// <summary>
+    
+    private PhotonView pv;
+    public Transform leftHandRig;
+    public Transform rightHandRig;
+
+    protected Vector3 curPos;
+    protected Quaternion curRot;
+
+    protected bool leftUse;
+    protected bool rightUse;
 
     private void Start()
     {
@@ -25,6 +37,8 @@ public class XRGrabbableObject : XRGrabInteractable
         DefaultLayerMask = interactionLayerMask;
         if (isNotGrabbableOnStart)
             interactionLayerMask = 0;
+
+        pv = GetComponent<PhotonView>();
     }
 
     protected override void OnSelectEnter(XRBaseInteractor interactor)
@@ -34,6 +48,21 @@ public class XRGrabbableObject : XRGrabInteractable
         canSelect = true;
         isSelectExit = false;
         selectRecognitionTimeVal = 0f;
+
+        if(pv)
+        {
+            pv.RequestOwnership();
+        }
+        
+        if(interactor.name.Contains("Left"))
+        {
+            leftUse = true;
+        }
+
+        if (interactor.name.Contains("Right"))
+        {
+            rightUse = true;
+        }
     }
 
     protected override void OnSelectExit(XRBaseInteractor interactor)
@@ -41,6 +70,16 @@ public class XRGrabbableObject : XRGrabInteractable
         base.OnSelectExit(interactor);
 
         isSelectExit = true;
+
+        if (interactor.name.Contains("Left"))
+        {
+            leftUse = false;
+        }
+
+        if (interactor.name.Contains("Right"))
+        {
+            rightUse = false;
+        }
     }
 
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
@@ -59,7 +98,10 @@ public class XRGrabbableObject : XRGrabInteractable
                 }
                 selectRecognitionTimeVal += Time.deltaTime;
             }
+
         }
+
+        
     }
 
     public bool CanSocketed()
@@ -74,5 +116,19 @@ public class XRGrabbableObject : XRGrabInteractable
             interactionLayerMask = DefaultLayerMask;
         else
             interactionLayerMask = 0;
+    }
+   
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if(stream.IsWriting)
+        {
+            stream.SendNext(this.transform.position);
+            stream.SendNext(this.transform.rotation);
+        }
+        else
+        {
+            curPos = (Vector3)stream.ReceiveNext();
+            curRot = (Quaternion)stream.ReceiveNext();
+        }
     }
 }
