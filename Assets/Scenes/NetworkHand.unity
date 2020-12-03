@@ -6283,6 +6283,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 742133420}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &397121980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397121979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
 --- !u!114 &397121981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6303,6 +6318,7 @@ MonoBehaviour:
   OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: 397121983}
+  - {fileID: 397121980}
   viewIdField: 3
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -6320,7 +6336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
   m_SynchronizeAngularVelocity: 1
-  m_TeleportEnabled: 1
+  m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
 --- !u!1 &400885425
 GameObject:
@@ -27145,6 +27161,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 742133420}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1574380223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574380222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
 --- !u!114 &1574380224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27165,6 +27196,7 @@ MonoBehaviour:
   OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: 1574380226}
+  - {fileID: 1574380223}
   viewIdField: 4
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -27182,7 +27214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
   m_SynchronizeAngularVelocity: 1
-  m_TeleportEnabled: 1
+  m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
 --- !u!1 &1651145861
 GameObject:
