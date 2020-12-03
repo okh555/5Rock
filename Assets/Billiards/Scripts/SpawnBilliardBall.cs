@@ -22,7 +22,7 @@ public class SpawnBilliardBall : MonoBehaviour
     {
         if (spawnedBalls != null)
         {
-            Destroy(spawnedBalls);
+            PhotonNetwork.Destroy(spawnedBalls);
         }
 
         spawnedBalls = PhotonNetwork.Instantiate("8Balls", spawnPosition.position, Quaternion.Euler(0, 0, 0));
