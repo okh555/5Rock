@@ -68,7 +68,7 @@ public class ButtonObjectInteractable : MonoBehaviour
             //    Volume = 1.0f
             //}, 0.0f);
             //OnButtonPressed.Invoke();
-            pv.RPC("pressedRPC", RpcTarget.AllBuffered);
+                pv.RPC("pressedRPC", RpcTarget.MasterClient);
         }
         else if (m_Pressed && !Mathf.Approximately(newDistance, MaxDistance))
         {//was just released
@@ -80,7 +80,7 @@ public class ButtonObjectInteractable : MonoBehaviour
             //    Volume = 1.0f
             //}, 0.0f);
             //OnButtonReleased.Invoke();
-            pv.RPC("releasedRPC", RpcTarget.AllBuffered);
+                pv.RPC("releasedRPC", RpcTarget.MasterClient);
         }
     }
 
