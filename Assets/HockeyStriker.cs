@@ -34,8 +34,8 @@ public class HockeyStriker : XRGrabableObject
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
     {
         base.ProcessInteractable(updatePhase);
-        transform.position = new Vector3(transform.position.x, currentPos.y, transform.position.z);
-        transform.rotation = new Quaternion(currentRot.x, currentRot.y, currentRot.z, currentRot.w);
+       // transform.position = new Vector3(transform.position.x, currentPos.y, transform.position.z);
+        //transform.rotation = new Quaternion(currentRot.x, currentRot.y, currentRot.z, currentRot.w);
 
         NewPos = transform.position;  // each frame track the new position
         ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  // velocity = dist/time
