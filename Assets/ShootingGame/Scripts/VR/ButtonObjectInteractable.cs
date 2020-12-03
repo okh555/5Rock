@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Photon.Pun;
 
-public class ButtonObjectInteractable : MonoBehaviour, IPunObservable
+public class ButtonObjectInteractable : MonoBehaviour
 {
     [System.Serializable]
     public class ButtonPressedEvent : UnityEvent { }
@@ -60,42 +60,43 @@ public class ButtonObjectInteractable : MonoBehaviour, IPunObservable
 
         if (!m_Pressed && Mathf.Approximately(newDistance, MaxDistance))
         {//was just pressed
-            m_Pressed = true;
+            //m_Pressed = true;
             //SFXPlayer.Instance.PlaySFX(ButtonPressAudioClip, transform.position, new SFXPlayer.PlayParameters()
             //{
             //    Pitch = Random.Range(0.9f, 1.1f),
             //    SourceID = -1,
             //    Volume = 1.0f
             //}, 0.0f);
-            OnButtonPressed.Invoke();
+            //OnButtonPressed.Invoke();
+            pv.RPC("pressedRPC", RpcTarget.AllBuffered);
         }
         else if (m_Pressed && !Mathf.Approximately(newDistance, MaxDistance))
         {//was just released
-            m_Pressed = false;
+            //m_Pressed = false;
             //SFXPlayer.Instance.PlaySFX(ButtonReleaseAudioClip, transform.position, new SFXPlayer.PlayParameters()
             //{
             //    Pitch = Random.Range(0.9f, 1.1f),
             //    SourceID = -1,
             //    Volume = 1.0f
             //}, 0.0f);
-            OnButtonReleased.Invoke();
+            //OnButtonReleased.Invoke();
+            pv.RPC("releasedRPC", RpcTarget.AllBuffered);
         }
-
-        Debug.Log(m_Pressed);
     }
 
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    [PunRPC]
+    void pressedRPC()
     {
-        if(stream.IsWriting)
-        {
-            stream.SendNext(m_Pressed);
-        }
-        else
-        {
-            m_Pressed = (bool)stream.ReceiveNext();
-        }
+        m_Pressed = true;
+        OnButtonPressed.Invoke();
     }
 
+    [PunRPC]
+    void releasedRPC()
+    {
+        m_Pressed = false;
+        OnButtonReleased.Invoke();
+    }
 
     //#if UNITY_EDITOR
     //    void OnDrawGizmosSelected()
