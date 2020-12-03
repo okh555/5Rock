@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Photon.Pun;
 
-public class ButtonObjectInteractable : MonoBehaviour
+public class ButtonObjectInteractable : MonoBehaviour, IPunObservable
 {
     [System.Serializable]
     public class ButtonPressedEvent : UnityEvent { }
@@ -24,7 +24,9 @@ public class ButtonObjectInteractable : MonoBehaviour
     Rigidbody m_Rigidbody;
     Collider m_Collider;
 
-    bool m_Pressed = false;
+    public bool m_Pressed = false;
+
+    public PhotonView pv;
 
     void Start()
     {
@@ -78,12 +80,27 @@ public class ButtonObjectInteractable : MonoBehaviour
             //}, 0.0f);
             OnButtonReleased.Invoke();
         }
+
+        Debug.Log(m_Pressed);
     }
 
-//#if UNITY_EDITOR
-//    void OnDrawGizmosSelected()
-//    {
-//        Handles.DrawLine(transform.position, transform.position + transform.TransformDirection(Axis).normalized * MaxDistance);
-//    }
-//#endif
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if(stream.IsWriting)
+        {
+            stream.SendNext(m_Pressed);
+        }
+        else
+        {
+            m_Pressed = (bool)stream.ReceiveNext();
+        }
+    }
+
+
+    //#if UNITY_EDITOR
+    //    void OnDrawGizmosSelected()
+    //    {
+    //        Handles.DrawLine(transform.position, transform.position + transform.TransformDirection(Axis).normalized * MaxDistance);
+    //    }
+    //#endif
 }
