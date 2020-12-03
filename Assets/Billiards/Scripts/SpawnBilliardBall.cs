@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class SpawnBilliardBall : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class SpawnBilliardBall : MonoBehaviour
 
     private GameObject spawnedBalls;
 
+    public Vector3 NormalVector;
+    public float CushionFriction = 0.2F;
 
     void Start()
     {
@@ -22,7 +26,16 @@ public class SpawnBilliardBall : MonoBehaviour
             Destroy(spawnedBalls);
         }
 
-        spawnedBalls = Instantiate(balls);
+        spawnedBalls = PhotonNetwork.Instantiate("8Balls", spawnPosition.position, Quaternion.Euler(0, 0, 0));
         spawnedBalls.transform.position = spawnPosition.position;
+    }
+
+    [PunRPC]
+    void cushionRPC(int otherPVID, Vector3 normal)
+    {
+        Collider other = PhotonNetwork.GetPhotonView(otherPVID).GetComponent<Collider>();
+        Debug.Log("fkjwioefioweajfioseajio;sjfsd");
+        other.attachedRigidbody.velocity = Vector3.Reflect(other.attachedRigidbody.velocity, normal) * CushionFriction;
+        other.attachedRigidbody.angularVelocity = Vector3.Reflect(other.attachedRigidbody.angularVelocity, normal) * CushionFriction;
     }
 }
