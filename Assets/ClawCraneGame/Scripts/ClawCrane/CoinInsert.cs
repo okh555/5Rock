@@ -37,7 +37,6 @@ public class CoinInsert : XRBaseInteractor
     {
         Coin = coin;
         CoinCount++;
-        Coin.transform.localPosition = transform.position + RemovePosition;
 
         if (OnCoinInsert.GetPersistentEventCount() > 0)
         {
