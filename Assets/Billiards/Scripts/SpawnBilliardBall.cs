@@ -24,9 +24,12 @@ public class SpawnBilliardBall : MonoBehaviour
     {
         if (spawnedBalls != null)
         {
-            PhotonNetwork.Destroy(spawnedBalls);
+            foreach(PhotonView pv in spawnedBalls.GetComponentsInChildren<PhotonView>())
+            {
+                pv.RPC("DestroyRPC", RpcTarget.AllBuffered);
+            }
+            GetComponent<PhotonView>().RPC("isSpawning", RpcTarget.AllBuffered);
         }
-
 
         if (!isInstantiate)
         {

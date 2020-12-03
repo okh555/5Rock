@@ -34,8 +34,8 @@ public class HockeyStriker : XRGrabableObject
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
     {
         base.ProcessInteractable(updatePhase);
-       // transform.position = new Vector3(transform.position.x, currentPos.y, transform.position.z);
-        //transform.rotation = new Quaternion(currentRot.x, currentRot.y, currentRot.z, currentRot.w);
+        transform.position = new Vector3(transform.position.x, currentPos.y, transform.position.z);
+        transform.rotation = new Quaternion(currentRot.x, currentRot.y, currentRot.z, currentRot.w);
 
         NewPos = transform.position;  // each frame track the new position
         ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  // velocity = dist/time
@@ -46,12 +46,6 @@ public class HockeyStriker : XRGrabableObject
 
     void OnTriggerEnter(Collider collider)
     {
-        if (rig.velocity.magnitude < .01)
-        {
-            rig.velocity = Vector3.zero;
-            rig.angularVelocity = Vector3.zero;
-        }
-
         if (collider.gameObject.tag == "Wall")
         {
             if (collider.gameObject.name == "Wall1")
@@ -76,6 +70,11 @@ public class HockeyStriker : XRGrabableObject
                 rig.velocity = new Vector3(-rig.velocity.x, 0, rig.velocity.z);
                 rig.velocity *= 0.8f;
             }
+        }
+        if (ObjVelocity.magnitude < .01)
+        {
+            rig.velocity = Vector3.zero;
+            rig.angularVelocity = Vector3.zero;
         }
     }
 
