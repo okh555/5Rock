@@ -528,9 +528,7 @@ MonoBehaviour:
   observableSearch: 2
   Synchronization: 3
   OwnershipTransfer: 1
-  ObservedComponents:
-  - {fileID: 3730542249946753888}
-  - {fileID: 5166927034249779029}
+  ObservedComponents: []
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -2637,6 +2635,16 @@ PrefabInstance:
     - target: {fileID: 5790243363394070222, guid: f8ce6e59cd0fc1645b56dc389a7d520c,
         type: 3}
       propertyPath: ObservedComponents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306144838285542754, guid: f8ce6e59cd0fc1645b56dc389a7d520c,
+        type: 3}
+      propertyPath: OwnershipTransfer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306144838285542754, guid: f8ce6e59cd0fc1645b56dc389a7d520c,
+        type: 3}
+      propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

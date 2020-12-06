@@ -59,10 +59,9 @@ public class XRTwoHandedGrabbable : XRGrabbableObject
         {
             if (secondGrab != null && secondHand != null)
             {
-                //transform.LookAt(secondHand.transform, Vector3.right);
+                transform.LookAt(secondHand.transform, Vector3.right);
 
-                //transform.position = selectingInteractor.transform.position;
-
+                transform.position = selectingInteractor.transform.position;
             }
         }
     }

@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 22750713747911812}
   - component: {fileID: 1043201924473834625}
   - component: {fileID: 4350987221778523230}
-  - component: {fileID: 1160614230346167524}
   - component: {fileID: 5305250686685398505}
   m_Layer: 0
   m_Name: Cue_Stick
@@ -270,27 +269,10 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 1
   ObservedComponents:
-  - {fileID: 1043201924473834625}
-  - {fileID: 1160614230346167524}
   - {fileID: 5305250686685398505}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &1160614230346167524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8519896060716246093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
 --- !u!114 &5305250686685398505
 MonoBehaviour:
   m_ObjectHideFlags: 0
