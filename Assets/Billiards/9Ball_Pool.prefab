@@ -526,6 +526,7 @@ MonoBehaviour:
   balls: {fileID: 6913772958737979926, guid: b7c63f7503a2b464eaad4cd709b0cfe4, type: 3}
   spawnPosition: {fileID: 3506727224923747641}
   CushionFriction: 0.2
+  isInstantiate: 0
 --- !u!114 &1216865957597903830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,8 +546,12 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 1
   ObservedComponents:
+  - {fileID: 4648637127163897557}
   - {fileID: 5855076472773446062}
+  - {fileID: 7675401975639315557}
   - {fileID: 966958291650880263}
+  - {fileID: 3730542249946753888}
+  - {fileID: 5166927034249779029}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -686,6 +691,8 @@ MonoBehaviour:
   m_RetainTransformParent: 1
   SelectRecognitionTime: 0.1
   isNotGrabbableOnStart: 0
+  leftHandRig: {fileID: 0}
+  rightHandRig: {fileID: 0}
 --- !u!1 &2072072171109015322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2029,6 +2036,8 @@ MonoBehaviour:
   m_RetainTransformParent: 1
   SelectRecognitionTime: 0.1
   isNotGrabbableOnStart: 0
+  leftHandRig: {fileID: 0}
+  rightHandRig: {fileID: 0}
 --- !u!1 &6409982310387497047
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,6 +2764,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5690707464917330516}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4648637127163897557 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1043201924473834625, guid: fa81f4517d84afc47b92a76e3308f22e,
+    type: 3}
+  m_PrefabInstance: {fileID: 5690707464917330516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4090873861526146585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40e1881b47606546a277f2d69c11a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7277451898818681060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2836,6 +2857,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7277451898818681060}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7675401975639315557 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1043201924473834625, guid: fa81f4517d84afc47b92a76e3308f22e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7277451898818681060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351769979617918121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40e1881b47606546a277f2d69c11a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9179618589193120190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2940,15 +2973,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eec2c055a90f61a4b97319683a8a8931, type: 3}
---- !u!4 &8208495804702980819 stripped
+--- !u!4 &4187849257395684004 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1049023193034478445, guid: eec2c055a90f61a4b97319683a8a8931,
-    type: 3}
-  m_PrefabInstance: {fileID: 9179618589193120190}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6379939474443244342 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -6345968391433274744, guid: eec2c055a90f61a4b97319683a8a8931,
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: eec2c055a90f61a4b97319683a8a8931,
     type: 3}
   m_PrefabInstance: {fileID: 9179618589193120190}
   m_PrefabAsset: {fileID: 0}
@@ -2958,9 +2985,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 9179618589193120190}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &4187849257395684004 stripped
+--- !u!4 &8208495804702980819 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: eec2c055a90f61a4b97319683a8a8931,
+  m_CorrespondingSourceObject: {fileID: 1049023193034478445, guid: eec2c055a90f61a4b97319683a8a8931,
+    type: 3}
+  m_PrefabInstance: {fileID: 9179618589193120190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6379939474443244342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6345968391433274744, guid: eec2c055a90f61a4b97319683a8a8931,
     type: 3}
   m_PrefabInstance: {fileID: 9179618589193120190}
   m_PrefabAsset: {fileID: 0}
