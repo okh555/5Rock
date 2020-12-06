@@ -18,6 +18,7 @@ public class HockeyManager : MonoBehaviour
     int player2_score = 0;
     bool scoreChange = false;
 
+    GameObject puck;
     GameObject player1;
     GameObject player2;
 
@@ -74,8 +75,10 @@ public class HockeyManager : MonoBehaviour
     [PunRPC]
     void Reset()
     {
-        GameObject puck = PhotonNetwork.Instantiate("AirHockeyPuck", puckPos.position, Puck.transform.rotation);
+        if(!puck)
+            puck = PhotonNetwork.Instantiate("AirHockeyPuck", puckPos.position, Puck.transform.rotation);
         puck.transform.parent = gameObject.transform;
+
         if (player2 == null)
         {
             player2 = PhotonNetwork.Instantiate("StrikerMain", player2Pos.position, HockeyStriker.transform.rotation);
