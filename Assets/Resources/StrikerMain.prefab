@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 2106552782485628230}
   - component: {fileID: -436537198711949229}
   - component: {fileID: 5028780312959548620}
+  - component: {fileID: -2610781833633541875}
+  - component: {fileID: -3750863185805127478}
   m_Layer: 0
   m_Name: StrikerMain
   m_TagString: Untagged
@@ -251,3 +253,42 @@ MonoBehaviour:
   SelectRecognitionTime: 0.1
   currentPos: {x: 0, y: 0, z: 0}
   currentRot: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &-2610781833633541875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8067881715073396245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 1
+  ObservedComponents:
+  - {fileID: -3750863185805127478}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &-3750863185805127478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8067881715073396245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 1
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3

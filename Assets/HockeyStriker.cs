@@ -3,7 +3,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class HockeyStriker : XRGrabableObject
 {
-
     public Vector3 currentPos;
     public Quaternion currentRot;
 
@@ -13,7 +12,6 @@ public class HockeyStriker : XRGrabableObject
 
     Rigidbody rig;
    
-
     void Start()
     {
         currentPos = GetComponent<Transform>().position;
@@ -27,8 +25,6 @@ public class HockeyStriker : XRGrabableObject
     protected override void OnSelectEnter(XRBaseInteractor interactor)
     {
         base.OnSelectEnter(interactor);
-        
-
     }
 
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
@@ -40,8 +36,6 @@ public class HockeyStriker : XRGrabableObject
         NewPos = transform.position;  // each frame track the new position
         ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  // velocity = dist/time
         PrevPos = NewPos;  // update position for next frame calculation
-
-
     }
 
     void OnTriggerEnter(Collider collider)
@@ -50,13 +44,13 @@ public class HockeyStriker : XRGrabableObject
         {
             if (collider.gameObject.name == "Wall1")
             {
-                Debug.Log(rig.velocity);
+                //Debug.Log(rig.velocity);
                 rig.velocity = new Vector3(rig.velocity.x, 0, -rig.velocity.z);
                 rig.velocity *= 0.8f;
             }
             if (collider.gameObject.name == "Wall2")
             {
-                Debug.Log(rig.velocity);
+                //Debug.Log(rig.velocity);
                 rig.velocity = new Vector3(-rig.velocity.x, 0, rig.velocity.z);
                 rig.velocity *= 0.8f;
             }

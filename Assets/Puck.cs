@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Puck : MonoBehaviour
 {
@@ -16,7 +17,9 @@ public class Puck : MonoBehaviour
     float decreaseTempTime = 0;
 
     HockeyManager hockeyManager;
-        
+
+    private PhotonView pv;
+    private PhotonView hockeyPhotonView;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,8 @@ public class Puck : MonoBehaviour
         rig.constraints = RigidbodyConstraints.FreezeRotation;
         GetComponent<Collider>().material.dynamicFriction = 0;
 
+        pv = GetComponent<PhotonView>();
+        hockeyPhotonView = hockeyManager.GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -37,8 +42,6 @@ public class Puck : MonoBehaviour
             rig.velocity = rig.velocity.normalized * maxSpeed;
 
         }
-
-
 
         if(transform.position.y != currentPos.y)
         {
@@ -52,10 +55,7 @@ public class Puck : MonoBehaviour
                 decreaseTime = Time.time;
             }
         }
-
-
     }
-
 
     void OnTriggerEnter(Collider collider)
     {
@@ -73,13 +73,17 @@ public class Puck : MonoBehaviour
             }
             if (collider.gameObject.name == "Score")
             {
-                hockeyManager.Score(true);
-                Destroy(this.gameObject);
+                //hockeyManager.Score(true);
+                //Destroy(this.gameObject);
+                hockeyPhotonView.RPC("Score", RpcTarget.MasterClient, false);
+                pv.RPC("destroyObject", RpcTarget.MasterClient);
             }
             if (collider.gameObject.name == "Score2")
             {
-                hockeyManager.Score(false);
-                Destroy(this.gameObject);
+                //hockeyManager.Score(false);
+                //Destroy(this.gameObject);
+                hockeyPhotonView.RPC("Score", RpcTarget.MasterClient, true);
+                pv.RPC("destroyObject", RpcTarget.MasterClient);
             }
             if (collider.gameObject.tag != "HockeyGround")
             {
@@ -87,4 +91,7 @@ public class Puck : MonoBehaviour
             }
         }
     }
+
+    [PunRPC]
+    void destroyObject() => PhotonNetwork.Destroy(this.gameObject);
 }
