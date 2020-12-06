@@ -10649,7 +10649,7 @@ PrefabInstance:
     - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: ObservedComponents.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
@@ -10659,6 +10659,11 @@ PrefabInstance:
     - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: ObservedComponents.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: ObservedComponents.Array.data[0]
       value: 
       objectReference: {fileID: 881506150}
     - target: {fileID: 5305250686685398505, guid: fa81f4517d84afc47b92a76e3308f22e,
@@ -10727,18 +10732,18 @@ PrefabInstance:
       value: Cue_Stick
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5305250686685398505, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
+    - {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
 --- !u!114 &881506150 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e,
+  m_CorrespondingSourceObject: {fileID: 5305250686685398505, guid: fa81f4517d84afc47b92a76e3308f22e,
     type: 3}
   m_PrefabInstance: {fileID: 881506149}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!43 &901838880
@@ -17416,7 +17421,7 @@ PrefabInstance:
     - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: ObservedComponents.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
@@ -17426,6 +17431,11 @@ PrefabInstance:
     - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: ObservedComponents.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: ObservedComponents.Array.data[0]
       value: 
       objectReference: {fileID: 1251805459}
     - target: {fileID: 5305250686685398505, guid: fa81f4517d84afc47b92a76e3308f22e,
@@ -17494,18 +17504,18 @@ PrefabInstance:
       value: Cue_Stick (1)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5305250686685398505, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
+    - {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
 --- !u!114 &1251805459 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e,
+  m_CorrespondingSourceObject: {fileID: 5305250686685398505, guid: fa81f4517d84afc47b92a76e3308f22e,
     type: 3}
   m_PrefabInstance: {fileID: 1251805458}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1267050277

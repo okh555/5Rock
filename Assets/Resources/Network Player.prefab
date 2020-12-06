@@ -237,6 +237,8 @@ MonoBehaviour:
   rightHand: {fileID: 671505525520519349}
   leftHandAnimator: {fileID: 4167404389938291718}
   rightHandAnimator: {fileID: 4167404389808597016}
+  leftUse: 0
+  rightUse: 0
   pvID: 0
 --- !u!1 &671505525991053287
 GameObject:
