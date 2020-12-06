@@ -10636,6 +10636,11 @@ PrefabInstance:
       propertyPath: rightHandRig
       value: 
       objectReference: {fileID: 94053251}
+    - target: {fileID: 1043201924473834625, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: pv
+      value: 
+      objectReference: {fileID: 1230583712}
     - target: {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: m_Enabled
@@ -16162,6 +16167,18 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1221861637 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1251805458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1226050618
 GameObject:
   m_ObjectHideFlags: 0
@@ -17185,6 +17202,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1230583712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
+    type: 3}
+  m_PrefabInstance: {fileID: 881506149}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1242706881
 GameObject:
   m_ObjectHideFlags: 0
@@ -17373,6 +17402,11 @@ PrefabInstance:
       propertyPath: rightHandRig
       value: 
       objectReference: {fileID: 94053251}
+    - target: {fileID: 1043201924473834625, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: pv
+      value: 
+      objectReference: {fileID: 1221861637}
     - target: {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: m_Enabled

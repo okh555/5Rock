@@ -17,7 +17,7 @@ public class XRGrabbableObject : XRGrabInteractable
 
     /// <summary>
     
-    private PhotonView pv;
+    public PhotonView pv;
     public Transform leftHandRig;
     public Transform rightHandRig;
 
@@ -35,7 +35,7 @@ public class XRGrabbableObject : XRGrabInteractable
         if (isNotGrabbableOnStart)
             interactionLayerMask = 0;
 
-        pv = GetComponent<PhotonView>();
+        //pv = GetComponent<PhotonView>();
     }
 
     protected override void OnSelectEnter(XRBaseInteractor interactor)

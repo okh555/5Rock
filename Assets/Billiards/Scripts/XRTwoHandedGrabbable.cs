@@ -68,16 +68,19 @@ public class XRTwoHandedGrabbable : XRGrabbableObject
 
         if(secondHand == null)
         {
-            if (leftUse)
+            if (pv.IsMine)
             {
-                this.transform.position = leftHandRig.transform.position;
-                this.transform.rotation = leftHandRig.transform.rotation;
-            }
+                if (leftUse)
+                {
+                    this.transform.position = leftHandRig.transform.position;
+                    this.transform.rotation = leftHandRig.transform.rotation;
+                }
 
-            if (rightUse)
-            {
-                this.transform.position = rightHandRig.transform.position;
-                this.transform.rotation = rightHandRig.transform.rotation;
+                if (rightUse)
+                {
+                    this.transform.position = rightHandRig.transform.position;
+                    this.transform.rotation = rightHandRig.transform.rotation;
+                }
             }
         }
     }
