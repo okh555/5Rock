@@ -10639,17 +10639,27 @@ PrefabInstance:
     - target: {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: viewIdField
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: ObservedComponents.Array.data[1]
+      value: 
+      objectReference: {fileID: 881506150}
     - target: {fileID: 5305250686685398505, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8519896060716246080, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
@@ -10711,10 +10721,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cue_Stick
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5305250686685398505, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
-    - {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
+--- !u!114 &881506150 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e,
+    type: 3}
+  m_PrefabInstance: {fileID: 881506149}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &901838880
 Mesh:
   m_ObjectHideFlags: 0
@@ -17355,17 +17375,27 @@ PrefabInstance:
     - target: {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: viewIdField
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: ObservedComponents.Array.data[1]
+      value: 
+      objectReference: {fileID: 1251805459}
     - target: {fileID: 5305250686685398505, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8519896060716246080, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
@@ -17427,10 +17457,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cue_Stick (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5305250686685398505, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
-    - {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
+--- !u!114 &1251805459 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1251805458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1267050277
 GameObject:
   m_ObjectHideFlags: 0

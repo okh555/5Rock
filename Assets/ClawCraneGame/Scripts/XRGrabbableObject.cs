@@ -101,6 +101,17 @@ public class XRGrabbableObject : XRGrabInteractable, IPunObservable
 
         }
 
+        if(leftUse)
+        {
+            this.transform.position = leftHandRig.transform.position;
+            this.transform.rotation = leftHandRig.transform.rotation;
+        }
+
+        if(rightUse)
+        {
+            this.transform.position = rightHandRig.transform.position;
+            this.transform.rotation = rightHandRig.transform.rotation;
+        }
         
     }
 
@@ -120,19 +131,24 @@ public class XRGrabbableObject : XRGrabInteractable, IPunObservable
    
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if(stream.IsWriting)
-        {
-
-            if (leftUse)
-            {
-                stream.SendNext(leftHandRig.transform.position);
-                stream.SendNext(leftHandRig.transform.rotation);
-            }
-        }
-        else
-        {
-            this.transform.position = (Vector3)stream.ReceiveNext();
-            this.transform.rotation = (Quaternion)stream.ReceiveNext();
-        }
+        //if(stream.IsWriting)
+        //{
+        //    Vector3 t = new Vector3(Mathf.Round(this.transform.position.x * 10) / 10.0f,
+        //        Mathf.Round(this.transform.position.y * 10) / 10.0f,
+        //        Mathf.Round(this.transform.position.z * 10) / 10.0f);
+               
+        //    Quaternion q = new Quaternion(Mathf.Round(this.transform.rotation.x * 10) / 10.0f,
+        //        Mathf.Round(this.transform.rotation.y * 10) / 10.0f,
+        //        Mathf.Round(this.transform.rotation.z * 10) / 10.0f,
+        //        Mathf.Round(this.transform.rotation.w * 10) / 10.0f);
+            
+        //    stream.SendNext(this.transform.position);
+        //    stream.SendNext(this.transform.rotation);
+        //}
+        //else
+        //{
+        //    this.transform.position = (Vector3)stream.ReceiveNext();
+        //    this.transform.rotation = (Quaternion)stream.ReceiveNext();
+        //}
     }
 }
