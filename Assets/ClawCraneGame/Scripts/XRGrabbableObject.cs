@@ -57,15 +57,17 @@ public class XRGrabbableObject : XRGrabInteractable
         if(!playerSpawner) playerSpawner = GameObject.Find("Starting Point").GetComponent<NetworkPlayerSpawner>();
         if(!localPlayer) localPlayer = playerSpawner.spawnedPlayerPrefab;
 
-        leftHandRig = localPlayer.GetComponent<NetworkPlayer>().leftHand;
-        rightHandRig = localPlayer.GetComponent<NetworkPlayer>().rightHand;
+        NetworkPlayer np = localPlayer.GetComponent<NetworkPlayer>();
+
+        leftHandRig = np.leftHand;
+        rightHandRig = np.rightHand;
         
-        if(interactor.name.Contains("Left"))
+        if(interactor.name.Contains("Left") && np.leftUse)
         {
             leftUse = true;
         }
 
-        if (interactor.name.Contains("Right"))
+        if (interactor.name.Contains("Right") && np.rightUse)
         {
             rightUse = true;
         }

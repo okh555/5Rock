@@ -21,6 +21,9 @@ public class NetworkPlayer : MonoBehaviour
 
     private PhotonView photonView;
 
+    public bool leftUse;
+    public bool rightUse;
+
     public int pvID;
 
     // Start is called before the first frame update
@@ -68,10 +71,19 @@ public class NetworkPlayer : MonoBehaviour
 
     private void updateAnimation(InputDevice inputDevice, Animator animator)
     {
-        inputDevice.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggered);
+        inputDevice.TryGetFeatureValue(CommonUsages.gripButton, out bool triggered);
         if (triggered)
             animator.SetTrigger("Selected");
         else
             animator.SetTrigger("Deselected");
+    }
+
+    private void updateUseGrip(InputDevice inputDevice)
+    {
+        InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(CommonUsages.gripButton, out bool leftTrigger);
+        InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(CommonUsages.gripButton, out bool rightTrigger);
+
+        leftUse = leftTrigger;
+        rightUse = rightTrigger;
     }
 }
