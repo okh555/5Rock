@@ -53,24 +53,7 @@ public class XRGrabbableObject : XRGrabInteractable
         {
             pv.RequestOwnership();
         }
-
-        if(!playerSpawner) playerSpawner = GameObject.Find("Starting Point").GetComponent<NetworkPlayerSpawner>();
-        if(!localPlayer) localPlayer = playerSpawner.spawnedPlayerPrefab;
-
-        NetworkPlayer np = localPlayer.GetComponent<NetworkPlayer>();
-
-        if (np.leftUse) leftHandRig = np.leftHand;
-        if (np.rightUse) rightHandRig = np.rightHand;
         
-        if(interactor.name.Contains("Left") && np.leftUse)
-        {
-            leftUse = true;
-        }
-
-        if (interactor.name.Contains("Right") && np.rightUse)
-        {
-            rightUse = true;
-        }
     }
 
     protected override void OnSelectExit(XRBaseInteractor interactor)
@@ -78,19 +61,6 @@ public class XRGrabbableObject : XRGrabInteractable
         base.OnSelectExit(interactor);
 
         isSelectExit = true;
-
-        leftHandRig = null;
-        rightHandRig = null;
-
-        if (interactor.name.Contains("Left"))
-        {
-            leftUse = false;
-        }
-
-        if (interactor.name.Contains("Right"))
-        {
-            rightUse = false;
-        }
     }
 
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
