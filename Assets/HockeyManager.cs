@@ -57,13 +57,19 @@ public class HockeyManager : MonoBehaviour
 
         if (player)
         {
-            player1_score++;
+            pv.RPC("player1Scored", RpcTarget.AllBuffered);
         }
         else
         {
-            player2_score++;
+            pv.RPC("player2Scored", RpcTarget.AllBuffered);
         }
     }
+
+    [PunRPC]
+    public void player1Scored() => player1_score++;
+
+    [PunRPC]
+    public void player2Scored() => player2_score++;
 
     [PunRPC]
     public void scoreSetText(int score1, int score2)

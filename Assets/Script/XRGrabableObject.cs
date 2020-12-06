@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using Photon.Pun;
 
 public class XRGrabableObject : XRGrabInteractable
 {
@@ -11,12 +12,16 @@ public class XRGrabableObject : XRGrabInteractable
 
     bool canSelect = false;
 
+    private PhotonView pv;
+
     private void Start()
     {
         if (SelectRecognitionTime < 0f)
         {
             SelectRecognitionTime = 0f;
         }
+
+        pv = GetComponent<PhotonView>();
     }
 
     protected override void OnSelectEnter(XRBaseInteractor interactor)
@@ -26,6 +31,9 @@ public class XRGrabableObject : XRGrabInteractable
         canSelect = true;
         isSelectExit = false;
         selectRecognitionTimeVal = 0f;
+
+        if (pv)
+            pv.RequestOwnership();
     }
 
     protected override void OnSelectExit(XRBaseInteractor interactor)
