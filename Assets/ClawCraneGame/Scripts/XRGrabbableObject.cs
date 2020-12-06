@@ -59,8 +59,8 @@ public class XRGrabbableObject : XRGrabInteractable
 
         NetworkPlayer np = localPlayer.GetComponent<NetworkPlayer>();
 
-        leftHandRig = np.leftHand;
-        rightHandRig = np.rightHand;
+        if (np.leftUse) leftHandRig = np.leftHand;
+        if (np.rightUse) rightHandRig = np.rightHand;
         
         if(interactor.name.Contains("Left") && np.leftUse)
         {
