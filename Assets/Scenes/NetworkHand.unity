@@ -2254,6 +2254,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -180.00002}
+--- !u!4 &94053251 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1837324663945620829, guid: 5da80694cd5fb404ba62239c876cdb98,
+    type: 3}
+  m_PrefabInstance: {fileID: 204426014}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &126377715
 GameObject:
   m_ObjectHideFlags: 0
@@ -10620,10 +10626,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1043201924473834625, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: leftHandRig
+      value: 
+      objectReference: {fileID: 1152101089}
+    - target: {fileID: 1043201924473834625, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: rightHandRig
+      value: 
+      objectReference: {fileID: 94053251}
+    - target: {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: viewIdField
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5305250686685398505, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8519896060716246080, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
@@ -10685,7 +10711,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cue_Stick
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5305250686685398505, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
+    - {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
 --- !u!43 &901838880
 Mesh:
@@ -15781,6 +15809,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &1152101089 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1837324665045843318, guid: 5da80694cd5fb404ba62239c876cdb98,
+    type: 3}
+  m_PrefabInstance: {fileID: 204426014}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1152680503
 Mesh:
   m_ObjectHideFlags: 0
@@ -17308,10 +17342,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1043201924473834625, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: leftHandRig
+      value: 
+      objectReference: {fileID: 1152101089}
+    - target: {fileID: 1043201924473834625, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: rightHandRig
+      value: 
+      objectReference: {fileID: 94053251}
+    - target: {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4350987221778523230, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: viewIdField
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5305250686685398505, guid: fa81f4517d84afc47b92a76e3308f22e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8519896060716246080, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
@@ -17373,7 +17427,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cue_Stick (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5305250686685398505, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
+    - {fileID: 1160614230346167524, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fa81f4517d84afc47b92a76e3308f22e, type: 3}
 --- !u!1 &1267050277
 GameObject:

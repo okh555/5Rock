@@ -122,17 +122,12 @@ public class XRGrabbableObject : XRGrabInteractable, IPunObservable
     {
         if(stream.IsWriting)
         {
-            Vector3 t = new Vector3(Mathf.Round(this.transform.position.x) / 10.0f,
-                Mathf.Round(this.transform.position.y) / 10.0f,
-                Mathf.Round(this.transform.position.z) / 10.0f);
-               
-            Quaternion q = new Quaternion(Mathf.Round(this.transform.rotation.x) / 10.0f,
-                Mathf.Round(this.transform.rotation.y) / 10.0f,
-                Mathf.Round(this.transform.rotation.z) / 10.0f,
-                Mathf.Round(this.transform.rotation.w) / 10.0f);
-            
-            stream.SendNext(t);
-            stream.SendNext(q);
+
+            if (leftUse)
+            {
+                stream.SendNext(leftHandRig.transform.position);
+                stream.SendNext(leftHandRig.transform.rotation);
+            }
         }
         else
         {
