@@ -77,18 +77,21 @@ public class HockeyManager : MonoBehaviour
     {
         if(!puck)
             puck = PhotonNetwork.Instantiate("AirHockeyPuck", puckPos.position, Puck.transform.rotation);
-        puck.transform.parent = gameObject.transform;
+        //puck.transform.parent = gameObject.transform;
 
         if (player2 == null)
         {
             player2 = PhotonNetwork.Instantiate("StrikerMain", player2Pos.position, HockeyStriker.transform.rotation);
-            player2.transform.parent = gameObject.transform;
+            //player2.transform.parent = gameObject.transform;
         }
         if (player1 == null)
         {
             player1 = PhotonNetwork.Instantiate("StrikerMain", player1Pos.position, HockeyStriker.transform.rotation);
-            player1.transform.parent = gameObject.transform;
+            //player1.transform.parent = gameObject.transform;
         }
+
+        pv.RPC("parentHockeyObject", RpcTarget.AllBuffered);
+
         if (Random.Range(0,2)  == 0)
         {
             puck.GetComponent<Rigidbody>().AddForce(new Vector3(20f, 0, 0));
@@ -96,6 +99,28 @@ public class HockeyManager : MonoBehaviour
         else
         {
             puck.GetComponent<Rigidbody>().AddForce(new Vector3(-20f, 0, 0));
+        }
+    }
+
+    [PunRPC]
+    void parentHockeyObject()
+    {
+        if(!GetComponentInChildren<Puck>())
+        {
+            Puck p = FindObjectOfType<Puck>();
+            p.transform.parent = gameObject.transform;
+            puck = p.gameObject;
+        }
+
+        if(!GetComponentInChildren<HockeyStriker>())
+        {
+            HockeyStriker[] strikers = FindObjectsOfType<HockeyStriker>();
+            foreach(HockeyStriker s in strikers)
+            {
+                s.transform.parent = gameObject.transform;
+                if (player1 == null) player1 = s.gameObject;
+                else if (player2 == null) player2 = s.gameObject;
+            }
         }
     }
     
