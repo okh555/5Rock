@@ -15,14 +15,15 @@ public class BilliardCushion : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    {
-        //    other.attachedRigidbody.velocity = Vector3.Reflect(other.attachedRigidbody.velocity, NormalVector) * CushionFriction;
-        //    other.attachedRigidbody.angularVelocity = Vector3.Reflect(other.attachedRigidbody.angularVelocity, NormalVector) * CushionFriction;        
+    {   
         PhotonView otherPV = other.GetComponent<PhotonView>();
         if (otherPV)
         {
-            int otherPVID = otherPV.ViewID;
-            pv.RPC("cushionRPC", RpcTarget.AllBuffered, otherPVID, this.NormalVector);
+            if (otherPV.name.Contains("Ball"))
+            {
+                int otherPVID = otherPV.ViewID;
+                pv.RPC("cushionRPC", RpcTarget.AllBuffered, otherPVID, this.NormalVector);
+            }
         }
     }
 }

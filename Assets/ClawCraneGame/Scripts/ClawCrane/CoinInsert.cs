@@ -21,8 +21,6 @@ public class CoinInsert : XRBaseInteractor
 
     XRBaseInteractable triggerdInteractable;
 
-    
-
     protected override void OnSelectEnter(XRBaseInteractable interactable)
     {
         base.OnSelectEnter(interactable);

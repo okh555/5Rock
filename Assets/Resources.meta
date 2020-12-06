@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 5bfd44f8ddc2e354eb6ef4e7cfbb6c77
+=======
+<<<<<<< Updated upstream:Assets/ClawCraneGame/bear.meta
+guid: 3c6ba5c0f6a099e44bbe8c5d1809cfb6
+=======
+guid: a5d08ec957f569d49ac9c04cdb0e02fd
+>>>>>>> Stashed changes:Assets/Resources.meta
+>>>>>>> Stashed changes
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
