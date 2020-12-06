@@ -21,7 +21,6 @@ public class BilliardCushion : MonoBehaviour
         {
             if (otherPV.name.Contains("Ball"))
             {
-                Debug.Log("fewfwaea");
                 int otherPVID = otherPV.ViewID;
                 pv.RPC("cushionRPC", RpcTarget.AllBuffered, otherPVID, this.NormalVector);
             }
