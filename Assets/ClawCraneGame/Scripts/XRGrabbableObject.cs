@@ -17,12 +17,15 @@ public class XRGrabbableObject : XRGrabInteractable
 
     /// <summary>
     
-    public PhotonView pv;
+    private PhotonView pv;
     public Transform leftHandRig;
     public Transform rightHandRig;
 
     protected bool leftUse;
     protected bool rightUse;
+
+    private NetworkPlayerSpawner playerSpawner;
+    private GameObject localPlayer;
 
     private void Start()
     {
@@ -35,7 +38,7 @@ public class XRGrabbableObject : XRGrabInteractable
         if (isNotGrabbableOnStart)
             interactionLayerMask = 0;
 
-        //pv = GetComponent<PhotonView>();
+        pv = GetComponent<PhotonView>();
     }
 
     protected override void OnSelectEnter(XRBaseInteractor interactor)
@@ -50,6 +53,12 @@ public class XRGrabbableObject : XRGrabInteractable
         {
             pv.RequestOwnership();
         }
+
+        if(!playerSpawner) playerSpawner = GameObject.Find("Starting Point").GetComponent<NetworkPlayerSpawner>();
+        if(!localPlayer) localPlayer = playerSpawner.spawnedPlayerPrefab;
+
+        leftHandRig = localPlayer.GetComponent<NetworkPlayer>().leftHand;
+        rightHandRig = localPlayer.GetComponent<NetworkPlayer>().rightHand;
         
         if(interactor.name.Contains("Left"))
         {
@@ -67,6 +76,9 @@ public class XRGrabbableObject : XRGrabInteractable
         base.OnSelectExit(interactor);
 
         isSelectExit = true;
+
+        leftHandRig = null;
+        rightHandRig = null;
 
         if (interactor.name.Contains("Left"))
         {

@@ -21,6 +21,8 @@ public class NetworkPlayer : MonoBehaviour
 
     private PhotonView photonView;
 
+    public int pvID;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,8 @@ public class NetworkPlayer : MonoBehaviour
                 item.enabled = false;
             }
         }
+
+        pvID = photonView.ViewID;
     }
 
     // Update is called once per frame

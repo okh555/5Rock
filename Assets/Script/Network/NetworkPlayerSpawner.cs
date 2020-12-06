@@ -5,7 +5,7 @@ using Photon.Pun;
 
 public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
 {
-    private GameObject spawnedPlayerPrefab;
+    public GameObject spawnedPlayerPrefab;
     
     public override void OnJoinedRoom()
     {

@@ -10674,7 +10674,7 @@ PrefabInstance:
     - target: {fileID: 8519896060716246080, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.432
+      value: -2.32
       objectReference: {fileID: 0}
     - target: {fileID: 8519896060716246080, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
@@ -13775,6 +13775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85280586b1dac234ea3ef8085711a390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnedPlayerPrefab: {fileID: 0}
 --- !u!43 &975034111
 Mesh:
   m_ObjectHideFlags: 0
@@ -17435,7 +17436,7 @@ PrefabInstance:
     - target: {fileID: 8519896060716246080, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.314
+      value: -1.664
       objectReference: {fileID: 0}
     - target: {fileID: 8519896060716246080, guid: fa81f4517d84afc47b92a76e3308f22e,
         type: 3}

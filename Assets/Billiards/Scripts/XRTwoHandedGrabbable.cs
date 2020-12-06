@@ -43,6 +43,8 @@ public class XRTwoHandedGrabbable : XRGrabbableObject
         base.OnSelectEnter(interactor);
 
         ActiveSecondGrab(true);
+
+        //PhotonNetwork.GetPhotonView();
     }
 
     protected override void OnSelectExit(XRBaseInteractor interactor)
@@ -67,24 +69,20 @@ public class XRTwoHandedGrabbable : XRGrabbableObject
 
             if (secondHand == null)
             {
-                if (pv.IsMine)
+                if (leftUse)
                 {
-                    if (leftUse)
-                    {
-                        this.transform.position = leftHandRig.transform.position;
-                        this.transform.rotation = leftHandRig.transform.rotation;
-                    }
+                    this.transform.position = leftHandRig.transform.position;
+                    this.transform.rotation = leftHandRig.transform.rotation;
+                }
 
-                    if (rightUse)
-                    {
-                        this.transform.position = rightHandRig.transform.position;
-                        this.transform.rotation = rightHandRig.transform.rotation;
-                    }
+                if (rightUse)
+                {
+                    this.transform.position = rightHandRig.transform.position;
+                    this.transform.rotation = rightHandRig.transform.rotation;
                 }
             }
         }
     }
-
 
     void SetSecondHandToTarget(XRBaseInteractor interactor)
     {
@@ -96,5 +94,4 @@ public class XRTwoHandedGrabbable : XRGrabbableObject
         if (secondHand == interactor)
             secondHand = null;
     }
-
 }
