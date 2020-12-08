@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using Photon.Pun;
 
-public class XRGrabableObject : XRGrabInteractable
+public class XRGrabableObject : XRGrabInteractable, IPunObservable
 {
     bool isSelectExit = false;
     float selectRecognitionTimeVal = 0f;
