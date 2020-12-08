@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using Photon.Pun;
 
-public class XRGrabableObject : XRGrabInteractable, IPunObservable
+public class XRGrabableObject : XRGrabInteractable
 {
     bool isSelectExit = false;
     float selectRecognitionTimeVal = 0f;
@@ -14,37 +14,44 @@ public class XRGrabableObject : XRGrabInteractable, IPunObservable
 
     private PhotonView pv;
 
+    public GameObject parentObject;
+
     private void Start()
     {
         if (SelectRecognitionTime < 0f)
         {
             SelectRecognitionTime = 0f;
         }
-
-        
     }
 
     protected override void OnSelectEnter(XRBaseInteractor interactor)
     {
         base.OnSelectEnter(interactor);
 
-        canSelect = true;
-        isSelectExit = false;
-        selectRecognitionTimeVal = 0f;
+        //canSelect = true;
+        //isSelectExit = false;
+        //selectRecognitionTimeVal = 0f;
 
-        pv = GetComponent<PhotonView>();
+        if(!pv)
+            pv = GetComponent<PhotonView>();
 
         if (pv)
         {
             pv.RequestOwnership();
+            pv.RPC("selectObject", RpcTarget.AllBuffered);
         }
     }
-
+   
     protected override void OnSelectExit(XRBaseInteractor interactor)
     {
         base.OnSelectExit(interactor);
 
-        isSelectExit = true;
+        //isSelectExit = true;
+
+        if(pv)
+        {
+            pv.RPC("unSelectObject", RpcTarget.AllBuffered);
+        }
     }
 
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
@@ -71,29 +78,47 @@ public class XRGrabableObject : XRGrabInteractable, IPunObservable
         return canSelect;
     }
 
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    //public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    //{
+    //    if (stream.IsWriting)
+    //    {
+    //        if (transform.parent)
+    //        {
+    //            stream.SendNext(transform.localPosition);
+    //        }
+    //        else
+    //        {
+    //            stream.SendNext(transform.position);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        if (transform.parent)
+    //        {
+    //            transform.localPosition = (Vector3)stream.ReceiveNext();
+    //        }
+    //        else
+    //        {
+    //            transform.position = (Vector3)stream.ReceiveNext();
+    //        }
+    //    }
+    //}
+
+    public void selectObject()
     {
-        if(stream.IsWriting)
-        {
-            if (transform.parent)
-            {
-                stream.SendNext(transform.localPosition);
-            }
-            else
-            {
-                stream.SendNext(transform.position);
-            }
-        }
-        else
-        {
-            if (transform.parent)
-            {
-                transform.localPosition = (Vector3)stream.ReceiveNext();
-            }
-            else
-            {
-                transform.position = (Vector3)stream.ReceiveNext();
-            }
-        }
+        
+
+        this.transform.parent = null;
+
+        canSelect = true;
+        isSelectExit = false;
+        selectRecognitionTimeVal = 0f;
+    }
+
+    public void unSelectObject()
+    {
+        this.transform.parent = parentObject.transform;
+
+        isSelectExit = true;
     }
 }

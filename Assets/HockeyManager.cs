@@ -115,15 +115,17 @@ public class HockeyManager : MonoBehaviour
         {
             Puck p = FindObjectOfType<Puck>();
             p.transform.parent = gameObject.transform;
+            
             puck = p.gameObject;
         }
 
-        if(!GetComponentInChildren<HockeyStriker>())
+        if (!GetComponentInChildren<HockeyStriker>())
         {
             HockeyStriker[] strikers = FindObjectsOfType<HockeyStriker>();
-            foreach(HockeyStriker s in strikers)
+            foreach (HockeyStriker s in strikers)
             {
                 s.transform.parent = gameObject.transform;
+                s.parentObject = this.gameObject;
                 if (player1 == null) player1 = s.gameObject;
                 else if (player2 == null) player2 = s.gameObject;
             }

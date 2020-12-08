@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using Photon.Pun;
 
 public class HockeyStriker : XRGrabableObject
 {
@@ -67,9 +68,23 @@ public class HockeyStriker : XRGrabableObject
         }
         if (ObjVelocity.magnitude < .01)
         {
-            rig.velocity = Vector3.zero;
-            rig.angularVelocity = Vector3.zero;
+            if (rig)
+            {
+                rig.velocity = Vector3.zero;
+                rig.angularVelocity = Vector3.zero;
+            }
         }
     }
 
+    [PunRPC]
+    void selectObject()
+    {
+        base.selectObject();
+    }
+
+    [PunRPC]
+    void unSelectObject()
+    {
+        base.unSelectObject();
+    }
 }
