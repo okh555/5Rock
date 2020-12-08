@@ -114,7 +114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  hockeyPhotonView: {fileID: 372390292, guid: 05a3c16b746a20f4c833ad70244f2f48, type: 3}
 --- !u!135 &4808714452150443978
 SphereCollider:
   m_ObjectHideFlags: 0

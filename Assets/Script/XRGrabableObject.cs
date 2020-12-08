@@ -21,7 +21,7 @@ public class XRGrabableObject : XRGrabInteractable
             SelectRecognitionTime = 0f;
         }
 
-        pv = GetComponent<PhotonView>();
+        
     }
 
     protected override void OnSelectEnter(XRBaseInteractor interactor)
@@ -32,8 +32,13 @@ public class XRGrabableObject : XRGrabInteractable
         isSelectExit = false;
         selectRecognitionTimeVal = 0f;
 
+        pv = GetComponent<PhotonView>();
+
         if (pv)
+        {
             pv.RequestOwnership();
+            Debug.Log("fweajfioaefjjiaiofjasofsa");
+        }
     }
 
     protected override void OnSelectExit(XRBaseInteractor interactor)
