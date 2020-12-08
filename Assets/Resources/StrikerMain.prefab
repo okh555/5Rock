@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 5028780312959548620}
   - component: {fileID: -2610781833633541875}
   - component: {fileID: -3750863185805127478}
+  - component: {fileID: -3083803733152414885}
   m_Layer: 0
   m_Name: StrikerMain
   m_TagString: Untagged
@@ -251,6 +252,7 @@ MonoBehaviour:
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
   SelectRecognitionTime: 0.1
+  parentObject: {fileID: 0}
   currentPos: {x: 0, y: 0, z: 0}
   currentRot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &-2610781833633541875
@@ -273,6 +275,7 @@ MonoBehaviour:
   OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: -3750863185805127478}
+  - {fileID: -3083803733152414885}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -283,7 +286,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8067881715073396245}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -292,3 +295,18 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &-3083803733152414885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8067881715073396245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
