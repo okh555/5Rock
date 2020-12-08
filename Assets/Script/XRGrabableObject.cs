@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using Photon.Pun;
 
-public class XRGrabableObject : XRGrabInteractable
+public class XRGrabableObject : XRGrabInteractable, IPunObservable
 {
     bool isSelectExit = false;
     float selectRecognitionTimeVal = 0f;
@@ -37,7 +37,6 @@ public class XRGrabableObject : XRGrabInteractable
         if (pv)
         {
             pv.RequestOwnership();
-            Debug.Log("fweajfioaefjjiaiofjasofsa");
         }
     }
 
@@ -70,5 +69,31 @@ public class XRGrabableObject : XRGrabInteractable
     public bool CanSocketed()
     {
         return canSelect;
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if(stream.IsWriting)
+        {
+            if (transform.parent)
+            {
+                stream.SendNext(transform.localPosition);
+            }
+            else
+            {
+                stream.SendNext(transform.position);
+            }
+        }
+        else
+        {
+            if (transform.parent)
+            {
+                transform.localPosition = (Vector3)stream.ReceiveNext();
+            }
+            else
+            {
+                transform.position = (Vector3)stream.ReceiveNext();
+            }
+        }
     }
 }
