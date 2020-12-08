@@ -78,36 +78,34 @@ public class XRGrabableObject : XRGrabInteractable
         return canSelect;
     }
 
-    //public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    //{
-    //    if (stream.IsWriting)
-    //    {
-    //        if (transform.parent)
-    //        {
-    //            stream.SendNext(transform.localPosition);
-    //        }
-    //        else
-    //        {
-    //            stream.SendNext(transform.position);
-    //        }
-    //    }
-    //    else
-    //    {
-    //        if (transform.parent)
-    //        {
-    //            transform.localPosition = (Vector3)stream.ReceiveNext();
-    //        }
-    //        else
-    //        {
-    //            transform.position = (Vector3)stream.ReceiveNext();
-    //        }
-    //    }
-    //}
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            if (transform.parent)
+            {
+                stream.SendNext(transform.localPosition);
+            }
+            else
+            {
+                stream.SendNext(transform.position);
+            }
+        }
+        else
+        {
+            if (transform.parent)
+            {
+                transform.localPosition = (Vector3)stream.ReceiveNext();
+            }
+            else
+            {
+                transform.position = (Vector3)stream.ReceiveNext();
+            }
+        }
+    }
 
     public void selectObject()
     {
-        
-
         this.transform.parent = null;
 
         canSelect = true;
