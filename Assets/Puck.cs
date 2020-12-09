@@ -49,6 +49,8 @@ public class Puck : MonoBehaviour, IPunObservable
             transform.position = new Vector3(transform.position.x, currentPos.y, transform.position.z);
         }
 
+        
+
         //if (Time.time - collisionTime > slipperyTime)
         //{
         //    if (Time.time - decreaseTempTime > decreaseTime)
@@ -111,14 +113,6 @@ public class Puck : MonoBehaviour, IPunObservable
             {
                 collisionTime = Time.time;
             }
-        }
-
-        if(collider.gameObject.name.Contains("StrikerMain"))
-        {
-            if(PhotonNetwork.IsMasterClient)
-                syncV = collider.GetComponent<HockeyStriker>().ObjVelocity;
-
-            Debug.Log(syncV);
         }
     }
 

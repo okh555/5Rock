@@ -34,6 +34,15 @@ public class HockeyStriker : XRGrabableObject
         transform.position = new Vector3(transform.position.x, currentPos.y, transform.position.z);
         transform.rotation = new Quaternion(currentRot.x, currentRot.y, currentRot.z, currentRot.w);
 
+        //NewPos = transform.position;  // each frame track the new position
+        //ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  // velocity = dist/time
+        //PrevPos = NewPos;  // update position for next frame calculation
+        pv.RPC("calculateVelocity", RpcTarget.MasterClient);
+    }
+
+    [PunRPC]
+    void calculateVelocity()
+    {
         NewPos = transform.position;  // each frame track the new position
         ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  // velocity = dist/time
         PrevPos = NewPos;  // update position for next frame calculation
