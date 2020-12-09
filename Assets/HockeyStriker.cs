@@ -12,7 +12,7 @@ public class HockeyStriker : XRGrabableObject
     public Vector3 ObjVelocity;
 
     Rigidbody rig;
-   
+
     void Start()
     {
         currentPos = GetComponent<Transform>().position;
@@ -34,10 +34,10 @@ public class HockeyStriker : XRGrabableObject
         transform.position = new Vector3(transform.position.x, currentPos.y, transform.position.z);
         transform.rotation = new Quaternion(currentRot.x, currentRot.y, currentRot.z, currentRot.w);
 
+        if(pv) pv.RPC("calculateVelocity", RpcTarget.MasterClient);
         //NewPos = transform.position;  // each frame track the new position
         //ObjVelocity = (NewPos - PrevPos) / Time.fixedDeltaTime;  // velocity = dist/time
         //PrevPos = NewPos;  // update position for next frame calculation
-        pv.RPC("calculateVelocity", RpcTarget.MasterClient);
     }
 
     [PunRPC]
@@ -75,6 +75,7 @@ public class HockeyStriker : XRGrabableObject
                 rig.velocity *= 0.8f;
             }
         }
+
         if (ObjVelocity.magnitude < .01)
         {
             if (rig)

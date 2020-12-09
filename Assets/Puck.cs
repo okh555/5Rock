@@ -49,8 +49,6 @@ public class Puck : MonoBehaviour, IPunObservable
             transform.position = new Vector3(transform.position.x, currentPos.y, transform.position.z);
         }
 
-        
-
         //if (Time.time - collisionTime > slipperyTime)
         //{
         //    if (Time.time - decreaseTempTime > decreaseTime)
@@ -59,8 +57,7 @@ public class Puck : MonoBehaviour, IPunObservable
         //        decreaseTime = Time.time;
         //    }
         //}
-
-        pv.RPC("synchronizedVelocity", RpcTarget.MasterClient);
+        pv.RPC("synchronizedVelocity", RpcTarget.AllBuffered);
     }
 
     [PunRPC]
@@ -68,7 +65,7 @@ public class Puck : MonoBehaviour, IPunObservable
     {
         if (rig.velocity.magnitude > maxSpeed)
         {
-            rig.velocity = syncV.normalized * maxSpeed;
+            rig.velocity = rig.velocity.normalized * maxSpeed;
         }
 
         if (Time.time - collisionTime > slipperyTime)
@@ -124,11 +121,11 @@ public class Puck : MonoBehaviour, IPunObservable
         if (stream.IsWriting)
         {
             if (PhotonNetwork.IsMasterClient)
-                stream.SendNext(syncV);
+                stream.SendNext(rig.velocity);
         }
         else
         {
-            syncV = (Vector3)stream.ReceiveNext();
+            rig.velocity = (Vector3)stream.ReceiveNext();
         }
     }
 }
