@@ -9,7 +9,7 @@ public class HockeyStriker : XRGrabableObject
 
     Vector3 PrevPos;
     Vector3 NewPos;
-    Vector3 ObjVelocity;
+    public Vector3 ObjVelocity;
 
     Rigidbody rig;
    

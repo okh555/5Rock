@@ -21,6 +21,8 @@ public class Puck : MonoBehaviour
     private PhotonView pv;
     private PhotonView hockeyPhotonView;
 
+    Vector3 syncV;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,16 +39,35 @@ public class Puck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(rig.velocity.magnitude > maxSpeed)
-        {
-            rig.velocity = rig.velocity.normalized * maxSpeed;
-
-        }
+        //if(rig.velocity.magnitude > maxSpeed)
+        //{
+        //    rig.velocity = rig.velocity.normalized * maxSpeed;
+        //}
 
         if(transform.position.y != currentPos.y)
         {
             transform.position = new Vector3(transform.position.x, currentPos.y, transform.position.z);
         }
+        //if (Time.time - collisionTime > slipperyTime)
+        //{
+        //    if (Time.time - decreaseTempTime > decreaseTime)
+        //    {
+        //        rig.velocity = new Vector3(rig.velocity.x * 0.99f, 0, rig.velocity.z * 0.99f);
+        //        decreaseTime = Time.time;
+        //    }
+        //}
+
+        pv.RPC("synchronizedVelocity", RpcTarget.MasterClient);
+    }
+
+    [PunRPC]
+    void synchronizedVelocity()
+    {
+        if (rig.velocity.magnitude > maxSpeed)
+        {
+            rig.velocity = rig.velocity.normalized * maxSpeed;
+        }
+
         if (Time.time - collisionTime > slipperyTime)
         {
             if (Time.time - decreaseTempTime > decreaseTime)
@@ -89,6 +110,12 @@ public class Puck : MonoBehaviour
             {
                 collisionTime = Time.time;
             }
+        }
+
+        if(collider.gameObject.name.Contains("StrikerMain"))
+        {
+            if(PhotonNetwork.IsMasterClient)
+                syncV = collider.GetComponent<HockeyStriker>().ObjVelocity;
         }
     }
 

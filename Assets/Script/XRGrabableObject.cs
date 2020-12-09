@@ -12,7 +12,7 @@ public class XRGrabableObject : XRGrabInteractable, IPunObservable
 
     bool canSelect = false;
 
-    private PhotonView pv;
+    protected PhotonView pv;
 
     public GameObject parentObject;
 
