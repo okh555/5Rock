@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 406774755983837387}
   - component: {fileID: 4808714452150443978}
   - component: {fileID: -3629406936972862865}
-  - component: {fileID: 1083778875938986105}
+  - component: {fileID: 6770659687829692778}
   m_Layer: 0
   m_Name: AirHockeyPuck
   m_TagString: Untagged
@@ -146,11 +146,12 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 1
   ObservedComponents:
-  - {fileID: 1083778875938986105}
+  - {fileID: 406774755983837387}
+  - {fileID: 6770659687829692778}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &1083778875938986105
+--- !u!114 &6770659687829692778
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,6 +164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 1
+  m_SynchronizeAngularVelocity: 0
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3

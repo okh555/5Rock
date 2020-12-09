@@ -57,6 +57,9 @@ public class Puck : MonoBehaviour, IPunObservable
         //        decreaseTime = Time.time;
         //    }
         //}
+
+        if(rig.velocity.magnitude >= 1.0f) syncV = rig.velocity;
+        
         pv.RPC("synchronizedVelocity", RpcTarget.AllBuffered);
     }
 
@@ -120,12 +123,12 @@ public class Puck : MonoBehaviour, IPunObservable
     {
         if (stream.IsWriting)
         {
-            if (PhotonNetwork.IsMasterClient)
-                stream.SendNext(rig.velocity);
+            stream.SendNext(syncV);
         }
         else
         {
-            rig.velocity = (Vector3)stream.ReceiveNext();
+            if(PhotonNetwork.IsMasterClient)
+                rig.velocity = (Vector3)stream.ReceiveNext();
         }
     }
 }
