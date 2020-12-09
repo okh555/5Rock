@@ -39,14 +39,34 @@ public class Puck : MonoBehaviour, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        if (rig.velocity.magnitude > maxSpeed)
-        {
-            rig.velocity = rig.velocity.normalized * maxSpeed;
-        }
+        //if (rig.velocity.magnitude > maxSpeed)
+        //{
+        //    rig.velocity = rig.velocity.normalized * maxSpeed;
+        //}
 
         if (transform.position.y != currentPos.y)
         {
             transform.position = new Vector3(transform.position.x, currentPos.y, transform.position.z);
+        }
+
+        //if (Time.time - collisionTime > slipperyTime)
+        //{
+        //    if (Time.time - decreaseTempTime > decreaseTime)
+        //    {
+        //        rig.velocity = new Vector3(rig.velocity.x * 0.99f, 0, rig.velocity.z * 0.99f);
+        //        decreaseTime = Time.time;
+        //    }
+        //}
+
+        pv.RPC("synchronizedVelocity", RpcTarget.MasterClient);
+    }
+
+    [PunRPC]
+    void synchronizedVelocity()
+    {
+        if (rig.velocity.magnitude > maxSpeed)
+        {
+            rig.velocity = syncV.normalized * maxSpeed;
         }
 
         if (Time.time - collisionTime > slipperyTime)
@@ -57,27 +77,7 @@ public class Puck : MonoBehaviour, IPunObservable
                 decreaseTime = Time.time;
             }
         }
-
-        //pv.RPC("synchronizedVelocity", RpcTarget.MasterClient);
     }
-
-    //[PunRPC]
-    //void synchronizedVelocity()
-    //{
-    //    if (rig.velocity.magnitude > maxSpeed)
-    //    {
-    //        rig.velocity = syncV.normalized * maxSpeed;
-    //    }
-
-    //    if (Time.time - collisionTime > slipperyTime)
-    //    {
-    //        if (Time.time - decreaseTempTime > decreaseTime)
-    //        {
-    //            rig.velocity = new Vector3(rig.velocity.x * 0.99f, 0, rig.velocity.z * 0.99f);
-    //            decreaseTime = Time.time;
-    //        }
-    //    }
-    //}
 
     void OnTriggerEnter(Collider collider)
     {
@@ -117,6 +117,8 @@ public class Puck : MonoBehaviour, IPunObservable
         {
             if(PhotonNetwork.IsMasterClient)
                 syncV = collider.GetComponent<HockeyStriker>().ObjVelocity;
+
+            Debug.Log(syncV);
         }
     }
 
